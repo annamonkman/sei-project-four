@@ -1,0 +1,21 @@
+[
+{
+  "model": "items.item",
+  "pk": 1,
+  "fields": {
+    "name": "Gaia Red Velvet Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_02_gcisfa.jpg",
+    "image_03": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_03_bamlsz.jpg",
+    "garment_type": "Dress",
+    "brand": "Kai Collective",
+    "size": 18.0,
+    "price": 35.62,
+    "rrp": 160.0,
+    "colour": "[\"[\\\"Red\\\"]\"]",
+    "material": "[\"[\\\"Polyester\\\"]\", \"[\\\"Lycra\\\"]\"]",
+    "is_available": true,
+    "description": "Our iconic Gaia dress, now in a luscious high grade stretchy velvet fabric. It is Gaia but with even more glamour and elegance, it looks like pure wealth. Designed for every woman to embrace every cur"
+  }
+}
+]
