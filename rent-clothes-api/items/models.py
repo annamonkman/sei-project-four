@@ -11,11 +11,12 @@ class Item(models.Model):
     size = models.FloatField()
     price = models.FloatField()
     rrp = models.FloatField()
-    colour = ArrayField(ArrayField(models.CharField(max_length=20), blank=True))
-    material = ArrayField(ArrayField(models.CharField(max_length=20), blank=True))
+    # colour = ArrayField(ArrayField(models.CharField(max_length=20), blank=True))
+    colour = models.CharField(max_length=100)
+    material = models.CharField(max_length=100)
     is_available = models.BooleanField(default=True)
-    description = models.TextField(max_length=200)
-    # current_rental_items = models.ForeignKey('jwt_auth.User', on_delete=models.CASCADE, related_name='current_rental_items')
+    description = models.TextField(max_length=300)
+    current_rental_items = models.ForeignKey('jwt_auth.User', on_delete=models.CASCADE, related_name='current_rental_items', blank=True)
 
     def __str__(self):
         return f"{self.name}, {self.garment_type}, {self.brand}"
