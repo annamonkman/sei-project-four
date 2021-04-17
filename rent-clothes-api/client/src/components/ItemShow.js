@@ -22,6 +22,9 @@ const ItemShow = () => {
   return (
     <div className="item-show-page-wrapper">
       <div className="item-show-image-wrapper">
+        <img src={ item.image_01 } alt={ `image of ${item.name}` } />
+        <img src={ item.image_02 } alt={ `image of ${item.name}` } />
+        <img src={ item.image_03 } alt={ `image of ${item.name}` } />
       </div>
       <div className="item-show-info-wrapper">
         <p>{ item.brand }</p>
