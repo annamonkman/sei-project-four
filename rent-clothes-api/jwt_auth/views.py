@@ -50,7 +50,18 @@ class LoginView(APIView):
         return Response({ 'token': token, 'message': f'Welcome back {user_to_login.first_name}'})
 
 
+
+
+
 # class WishlistView(APIView):
+
+# def addproduct(request, id):
+#     item=get_object_or_404(Product, id=id)
+#     user = User()
+#     user.items.add(item)
+#     return render(request, 'thispage.html')
+
+# def removeproduct(request, id):
 
 
 #     def post(self, request, pk):

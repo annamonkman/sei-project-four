@@ -1,7 +1,7 @@
 [
 {
   "model": "items.item",
-  "pk": 1,
+  "pk": 2,
   "fields": {
     "name": "Gaia Red Velvet Dress",
     "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg",
@@ -9,13 +9,54 @@
     "image_03": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_03_bamlsz.jpg",
     "garment_type": "Dress",
     "brand": "Kai Collective",
-    "size": 18.0,
-    "price": 35.62,
+    "size": 18,
+    "price": 31.62,
     "rrp": 160.0,
-    "colour": "[\"[\\\"Red\\\"]\"]",
-    "material": "[\"[\\\"Polyester\\\"]\", \"[\\\"Lycra\\\"]\"]",
+    "colour": "Red",
+    "material": "95% Polyester, 5% Lycra",
     "is_available": true,
-    "description": "Our iconic Gaia dress, now in a luscious high grade stretchy velvet fabric. It is Gaia but with even more glamour and elegance, it looks like pure wealth. Designed for every woman to embrace every cur"
+    "description": "Our iconic Gaia dress, now in a luscious high grade stretchy velvet fabric. It is Gaia but with even more glamour and elegance, it looks like pure wealth. Designed for every woman to embrace every curve and walk into the room with the utmost confidence.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 3,
+  "fields": {
+    "name": "Double Breasted Shearling Coat",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618573685/Items/double_breasted_shearling_coat_01_holdoz.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1618573685/Items/double_breasted_shearling_coat_02_mgkgbs.jpg",
+    "image_03": null,
+    "garment_type": "Coat",
+    "brand": "Stand Studio",
+    "size": 8,
+    "price": 40.68,
+    "rrp": 250.0,
+    "colour": "Black, Orange",
+    "material": "Shearling",
+    "is_available": true,
+    "description": "Black and orange double breasted shearling jacket from stand featuring an oversized collar, a front button fastening, long sleeves, an oversized fit and a straight hem.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 4,
+  "fields": {
+    "name": "Blue Mesh Hydrodynamic Ruched Mini Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_01_aljxuw.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_02_mvcnlt.jpg",
+    "image_03": "https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_03_bewq4n.jpg",
+    "garment_type": "Dress",
+    "brand": "Marine Serre",
+    "size": 8,
+    "price": 65.05,
+    "rrp": 1085.0,
+    "colour": "Blue",
+    "material": "Body: 80% polyamide, 20% viscose. Lining: 81% polyamide, 19% elastane.",
+    "is_available": true,
+    "description": "Long sleeve paneled semi-sheer viscose-blend mesh short dress in blue. Ruching throughout. Mock neck collar. Thumb opening at cuffs. Padding at side-seam. Zip closure at back. Full stretch mesh lining. Tonal hardware.",
+    "current_renter": null
   }
 }
 ]

@@ -13,10 +13,10 @@ class Item(models.Model):
     rrp = models.FloatField()
     # colour = ArrayField(ArrayField(models.CharField(max_length=20), blank=True))
     colour = models.CharField(max_length=100, blank=True, null=True)
-    material = models.CharField(max_length=100)
+    material = models.CharField(max_length=100, blank=True, null=True)
     is_available = models.BooleanField(default=True)
     description = models.TextField(max_length=800)
-    current_renter = models.ForeignKey('jwt_auth.User', on_delete=models.CASCADE, related_name='current_renter', blank=True, null=True)
+    current_renter = models.ForeignKey("jwt_auth.User", on_delete=models.CASCADE, related_name="items", blank=True, null=True)
 
     def __str__(self):
         return f"{self.name}, {self.garment_type}, {self.brand}"
