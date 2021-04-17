@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import ItemIndex from './components/ItemIndex'
 import ItemShow from './components/ItemShow'
 import HowItWorks from './components/HowItWorks'
+import Register from './components/Register'
+import Login from './components/Login'
 import RegLogin from './components/RegLogin'
 import UserProfile from './components/UserProfile'
 import Checkout from './components/Checkout'
@@ -32,7 +34,13 @@ const App = () => {
           <UserProfile />
         </Route>
         <Route exact path ="/sign-in">
-          <RegLogin />
+          <RegLogin/>
+        </Route>
+        <Route exact path ="/register">
+          <Register />
+        </Route>
+        <Route exact path ="/login">
+          <Login />
         </Route>
         <Route exact path ="/how-it-works">
           <HowItWorks />
