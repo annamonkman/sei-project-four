@@ -13,16 +13,26 @@ const ItemShow = () => {
     console.log(item, setItem)
     const getData = async () => {
       const response = await axios.get(`/api/items/${params.id}`)
-      console.log(response)
+      setItem(response.data)
     }
     getData()
   }, [])
 
+  if ( !item ) return null
   return (
     <div className="item-show-page-wrapper">
       <div className="item-show-image-wrapper">
       </div>
       <div className="item-show-info-wrapper">
+        <p>{ item.brand }</p>
+        <p>{ item.name }</p>
+        <p>UK { item.size }</p>
+        <p>Rent for £{ item.price }</p>
+        <p>Market Value: £{ item.rrp }</p>
+        <p>Item Info</p>
+        <p>{ item.description }</p>
+        <p>{ item.colour }</p>
+        <p>{ item.material }</p>
       </div>
     </div>
   )
