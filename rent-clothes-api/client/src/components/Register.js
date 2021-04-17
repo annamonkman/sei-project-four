@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -12,13 +13,19 @@ const Register = () => {
   console.log(formData, setFormData)
 
   const handleChange = (event) => {
-    // set state when user types
+    const newFormData = { ...formData, [event.target.name]: event.target.value }
+    setFormData(newFormData)
+  }
 
+  const handleSubmit = async event => {
+    event.preventDefault()
+    const response = await axios.post('/api/auth/register/', formData)
+    console.log(response)
   }
   
   return (
     <div className="register-form-container">
-      <form>
+      <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="username">Username</label>
           <input 
