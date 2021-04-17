@@ -1,0 +1,39 @@
+* {
+  font-family: sans-serif;
+}
+
+.register-form-container {
+
+}
+.login-form-container {
+
+}
+.form-field {
+  margin-bottom: 12px;
+  display: block;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  padding: 5px;
+  width: 400px;
+  border-radius: 0;
+  border: 1px, solid, black;
+}
+input:focus {
+  border-radius: 0;
+  border: 1px, solid, black;
+  outline: none;
+}
+
+.submit-button {
+  width: 100px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+}
+.submit-button:hover {
+  background-color: rgb(83, 83, 83);
+}
