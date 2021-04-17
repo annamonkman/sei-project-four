@@ -36,7 +36,14 @@ const ItemShow = () => {
         <p>{ item.description }</p>
         <p>{ item.colour }</p>
         <p>{ item.material }</p>
+
+        {/* <div className="rent-now-button">
+          <Link to="" className="rent-button">Rent Now</Link>
+        </div> */}
+        <button className="rent-now-button">Rent Now</button>
+      
       </div>
+
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 const Login = () => {
@@ -6,7 +7,8 @@ const Login = () => {
     email: '',
     password: '',
   })
-  console.log(formData, setFormData)
+  
+  const history = useHistory()
 
   const handleChange = (event) => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
@@ -17,7 +19,7 @@ const Login = () => {
     event.preventDefault()
     const response = await axios.post('/api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
-    console.log(response)
+    history.goBack()
   }
 
   return (

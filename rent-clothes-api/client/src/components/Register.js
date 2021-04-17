@@ -10,7 +10,15 @@ const Register = () => {
     password: '',
     password_confirmation: '',
   })
-  console.log(formData, setFormData)
+  
+  const [errors, setErrors] = useState({
+    username: '',
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: '',
+    password_confirmation: '',
+  })
 
   const handleChange = (event) => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
@@ -19,8 +27,14 @@ const Register = () => {
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const response = await axios.post('/api/auth/register/', formData)
-    console.log(response)
+    try {
+      const response = await axios.post('/api/auth/register/', formData)
+      console.log(response)
+    } catch (err) {
+      console.log(err.response)
+      setErrors(err.response.data.errors)
+    }
+    
   }
   
   return (
@@ -29,6 +43,7 @@ const Register = () => {
         <div className="form-field">
           <label htmlFor="username">Username</label>
           <input 
+            className={`input ${errors.username ? 'is-error' : ''}`}
             name="username" 
             type="text" id="username" 
             value={formData.username} 

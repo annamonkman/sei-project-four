@@ -27,6 +27,9 @@ input:focus {
   border: 1px, solid, black;
   outline: none;
 }
+.is-error {
+  border: 1px, solid, red;
+}
 
 .submit-button {
   width: 100px;
