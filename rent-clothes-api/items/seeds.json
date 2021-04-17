@@ -1,7 +1,7 @@
 [
 {
   "model": "items.item",
-  "pk": 2,
+  "pk": 1,
   "fields": {
     "name": "Gaia Red Velvet Dress",
     "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg",
@@ -21,27 +21,7 @@
 },
 {
   "model": "items.item",
-  "pk": 3,
-  "fields": {
-    "name": "Double Breasted Shearling Coat",
-    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618573685/Items/double_breasted_shearling_coat_01_holdoz.jpg",
-    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1618573685/Items/double_breasted_shearling_coat_02_mgkgbs.jpg",
-    "image_03": null,
-    "garment_type": "Coat",
-    "brand": "Stand Studio",
-    "size": 8,
-    "price": 40.68,
-    "rrp": 250.0,
-    "colour": "Black, Orange",
-    "material": "Shearling",
-    "is_available": true,
-    "description": "Black and orange double breasted shearling jacket from stand featuring an oversized collar, a front button fastening, long sleeves, an oversized fit and a straight hem.",
-    "current_renter": null
-  }
-},
-{
-  "model": "items.item",
-  "pk": 4,
+  "pk": 2,
   "fields": {
     "name": "Blue Mesh Hydrodynamic Ruched Mini Dress",
     "image_01": "https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_01_aljxuw.jpg",
@@ -55,7 +35,7 @@
     "colour": "Blue",
     "material": "Body: 80% polyamide, 20% viscose. Lining: 81% polyamide, 19% elastane.",
     "is_available": true,
-    "description": "Long sleeve paneled semi-sheer viscose-blend mesh short dress in blue. Ruching throughout. Mock neck collar. Thumb opening at cuffs. Padding at side-seam. Zip closure at back. Full stretch mesh lining. Tonal hardware.",
+    "description": "Long sleeve panelled semi-sheer viscose-blend mesh short dress in blue. Ruching throughout. Mock neck collar. Thumb opening at cuffs. Padding at side-seam. Zip closure at back. Full stretch mesh lining. Tonal hardware.",
     "current_renter": null
   }
 }
