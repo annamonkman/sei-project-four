@@ -18,6 +18,18 @@ const ItemShow = () => {
     getData()
   }, [])
 
+  // const handleAddToWishlist = async event => {
+  //   try {
+  //     await axios.put(`/api/auth/${id}/wishlist`, xxxx, {
+  //       headers: {
+  //         Authorization: `Bearer ${getTokenFromLocalStorage()}`
+  //       },
+  //     })
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
   if ( !item ) return null
   return (
     <div className="item-show-page-wrapper">

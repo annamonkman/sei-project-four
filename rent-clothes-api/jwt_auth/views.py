@@ -58,7 +58,6 @@ class UserListView(APIView):
     
     def get(self, _request):
         users = User.objects.all()
-        print(users)
         serialized_users = UserSerializer(users, many=True)
         return Response(serialized_users.data, status=status.HTTP_200_OK)
 
@@ -79,33 +78,37 @@ class UserDetailView(APIView):
 
 
 class WishlistView(APIView):
-    # def post_product(self, _request, pk):
-    #     get_user_id = User.objects.get(pk=pk)
-
-    #     user_id = request.data.get('id')
-
-    #     print('get user id>>>>>', get_user_id)
-    #     print('user id >>>>>', user_id)
-    #     print('HELLO')
-
-    def put(self, _request, pk):
+    def put(self, request, pk):
+        #get user
         user = User.objects.get(pk=pk)
-        product = request.data.get('id')
+        print('user>>>>>>>', user)
+        print('userWishlist >>>>>>>', user.wishlist_items)
+        #get item id off request
+        item = request.data.get('id')
+        print('item id>>>>>>>', item)
+        # add item to wishlist that is on user and then save it
+        if user:
+            # wishlist.add(item)
+            user.wishlist_items.add(item)
+            # item.add()
+            user.save() 
+            return Response(item, status=status.HTTP_202_ACCEPTED)
+        return Response(user.wishlist_items.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-        print('get user id>>>>>', user)
-        print('HELLO')
+class WishListRemoveView(APIView):
+    def put(self, request, pk):
+        # get user and item id
+        user = User.objects.get(pk=pk)
+        item = request.data.get('id')
 
-        
+        # check if item on users wishlist , if on, take off
+        if item in user.wishlist_items:
+            user.wishlist_items.remove(item)
+            user.save()
+            return Response(item, status=status.HTTP_200_OK)
+        return Response(user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-        # add product to wishlist that is on user and then save it
 
-# def addproduct(request, id):
-#     item=get_object_or_404(Product, id=id)
-#     user = User()
-#     user.items.add(item)
-#     return render(request, 'thispage.html')
-
-# def removeproduct(request, id):
 
 
 #     def post(self, request, pk):
@@ -118,6 +121,3 @@ class WishlistView(APIView):
 #         item = 
 #         user_profile = get_or_create(UserProfile, user=request.user)
 #         user_profile.wishlist.add(item)
-
-        # print every poitn - make sure have correct ids
-        # once have id of user and id of item 
