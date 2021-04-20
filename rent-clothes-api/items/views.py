@@ -31,28 +31,29 @@ class ItemDetailView(APIView):
 
 
 class CurrentRenterView(APIView):
-    def post(self, request, pk):
+    def put(self, request, pk):
     # # get user id
         user = request.data.get('id')
-    #     print('USER>>>>', user)
-    # # get item id
-    #     item = Item.objects.get(pk=pk)
-    #     print('ITEM.CURRENT RENTER>>>>', item.current_renter)
-    # # add to current_renter
-    #     if item:
-    #         item.update(current_renter=user)
-    #         item.save()
-    #         return Response(user, status=status.HTTP_202_ACCEPTED)
-    #     return Response(user.wishlist_items.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
         item = Item.objects.get(pk=pk)
         updated_item = ItemSerializer(item, data=request.data)
+        # print('UPDATED ITEM DATA>>>>', updated_item.data)
         if updated_item.is_valid():
+            
             updated_item.save()
             return Response(updated_item.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_item.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+# current_renter = null frontend, in front end when pullng tpgether data to send jsut have to send that with null instead of current user
 
 # class CurrentRenterRemoveView(APIView):
-#     def post(self, request, pk):
+#     def put(self, request, pk):
+#         user = request.data.get('id')
+#         item = Item.objects.get(pk=pk)
+#         updated_item = ItemSerializer(item, data=request.data)
+#         # print('UPDATED ITEM DATA>>>>', updated_item.data)
+#         if updated_item.is_valid():
             
+#             updated_item.save()
+#             return Response(updated_item.data, status=status.HTTP_202_ACCEPTED)
+#         return Response(updated_item.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)  
         
