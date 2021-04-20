@@ -48,12 +48,11 @@ const ItemShow = () => {
         <p>{ item.description }</p>
         <p>{ item.colour }</p>
         <p>{ item.material }</p>
-
-        {/* <div className="rent-now-button">
-          <Link to="" className="rent-button">Rent Now</Link>
-        </div> */}
-        <button className="rent-now-button">Rent Now</button>
-      
+        
+        <div className="rent-and-add-to-wishlist">
+          <button className="rent-now-button">Rent Now</button>
+          <button className="add-to-wishlist-button">Add to Wishlist</button>
+        </div>
       </div>
 
     </div>

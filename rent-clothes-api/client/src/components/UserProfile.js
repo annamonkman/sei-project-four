@@ -4,6 +4,8 @@ import { getTokenFromLocalStorage } from '../helpers/auth'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+// import ItemCard from './ItemCard'
+
 const UserProfile = () => {
 
   const [userInfo, setUserInfo] = useState(null)
@@ -37,6 +39,8 @@ const UserProfile = () => {
         <div className="wishlist-wrapper">
           <h4>Your wishlist:</h4>
           <div className="wishlist-items-cards-list">
+            {/* {userInfo.wishlist_items} */}
+            {/* <ItemCard /> */}
           </div>
         </div>
         <div className="rented-items-wrapper">
