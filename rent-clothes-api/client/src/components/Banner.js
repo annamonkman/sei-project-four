@@ -19,10 +19,31 @@ const Banner = () => {
       })
       setUserInfo(data)
       console.log('data', data)
-      
     }
-    getData()
+    if (payload) {
+      getData()
+    }
+    if (!payload) {
+      return null
+    }
+    
   },[])
+
+  // useEffect(() => {
+  //   const payload = getPayloadFromToken()
+  //   if (payload) {
+  //     const getData = async () => {
+  //       const { data } = await axios.get(`/api/auth/${payload.sub}/`,{
+  //         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+  //       })
+  //       setUserInfo(data)
+  //     }
+  //     getData()
+  //   } 
+  //   if (!payload) {
+  //     return null
+  //   }
+  // },[])
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
