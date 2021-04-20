@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
-import { Link, useHistory, useParams } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { userIsAuthenticated } from '../helpers/auth'
 import axios from 'axios'
 import { getTokenFromLocalStorage, getPayloadFromToken } from '../helpers/auth'
@@ -19,6 +19,7 @@ const Banner = () => {
       })
       setUserInfo(data)
       console.log('data', data)
+      
     }
     getData()
   },[])
@@ -33,7 +34,7 @@ const Banner = () => {
     if (userIsAuthenticated()) return setIsLoggedIn(true)
     if (!userIsAuthenticated()) return setIsLoggedIn(false)
   }, [userIsAuthenticated, isLoggedIn])
-  
+
   if (!userInfo) return null
   console.log('user info', userInfo)
 

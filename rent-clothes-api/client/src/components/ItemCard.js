@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom'
 const ItemCard = ({ image_01: image01, id, brand, name, price, rrp, size }) => {
   return (
     <>
-      <div className="item-card-wrapper">
-        <Link to={`/clothes/${id}`}>
-          <div className="item-card-image-wrapper">
-            <img src={`${image01}`} />
+      <Link to={`/clothes/${id}`}>
+        <div className="item-card-wrapper">
+        
+          <div className="item-card-image-wrapper"
+            style={{
+              backgroundImage: `url(${image01})`,
+            }}>
+            {/* <img src={`${image01}`} /> */}
           </div>
           <div className="item-card-info-wrapper">
             <p>{brand}</p>
@@ -16,8 +20,9 @@ const ItemCard = ({ image_01: image01, id, brand, name, price, rrp, size }) => {
             <p>£{price}</p>
             <p>£{rrp}</p>
           </div>
-        </Link>
-      </div>
+        
+        </div>
+      </Link>
     </>
   )
 }

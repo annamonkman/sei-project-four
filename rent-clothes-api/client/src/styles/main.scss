@@ -62,6 +62,32 @@
 
 // * ---------------------------------------------------------------------------CARD
 
+.item-card-wrapper {
+  border: 1px solid green;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.item-card-image-wrapper {
+  // padding: 40px 20px;
+  height: 400px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  position: relative;
+  text-align: center;
+  border: 1px solid red;
+}
+.item-card-info-wrapper {
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid blue;
+  width: 200px;
+}
 // * ---------------------------------------------------------------------------HOW IT WORKS
 
 // * ---------------------------------------------------------------------------USER PROFILE
