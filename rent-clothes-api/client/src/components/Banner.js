@@ -17,6 +17,7 @@ const Banner = () => {
       const { data } = await axios.get(`/api/auth/${params.id}/`,{
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
       })
+      console.log('PARAMS>>', params)
       // setUserInfo(data)
       console.log('data', data)
     }
