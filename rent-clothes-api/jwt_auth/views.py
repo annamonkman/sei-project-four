@@ -102,11 +102,14 @@ class WishListRemoveView(APIView):
         item = request.data.get('id')
 
         # check if item on users wishlist , if on, take off
-        if item in user.wishlist_items:
+        if item:
             user.wishlist_items.remove(item)
             user.save()
             return Response(item, status=status.HTTP_200_OK)
         return Response(user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+
 
 
 

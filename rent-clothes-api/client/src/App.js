@@ -30,7 +30,7 @@ const App = () => {
         <Route exact path="/clothes/:id">
           <ItemShow />
         </Route>
-        <Route exact path="/user-profile">
+        <Route exact path="/user-profile/:id">
           <UserProfile />
         </Route>
         <Route exact path ="/sign-in">

@@ -28,3 +28,25 @@ class ItemDetailView(APIView):
         item = self.get_item(pk=pk)
         serialized_item = ItemSerializer(item)
         return Response(serialized_item.data, status=status.HTTP_200_OK)
+
+
+class CurrentRenterView(APIView):
+    def put(self, request, pk):
+    # get user id
+        user = request.data.get('id')
+        print('USER>>>>', user)
+    # get item id
+        item = Item.objects.get(pk=pk)
+        print('ITEM>>>>', item)
+    # add to current_renter
+        if item:
+            item.current_renter.add(user)
+            item.save()
+            return Response(user, status=status.HTTP_202_ACCEPTED)
+        return Response(user.wishlist_items.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+# class CurrentRenterRemoveView(APIView):
+#     def post(self, request, pk):
+            
+        

@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { userIsAuthenticated } from '../helpers/auth'
+import axios from 'axios'
+import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const Banner = () => {
 
   const history = useHistory()
+  const [isLoggedIn, setIsLoggedIn] = useState(null)
+  // const [userInfo, setUserInfo] = useState(null)
+  const params = useParams()
+
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(`/api/auth/${params.id}/`,{
+        headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+      })
+      // setUserInfo(data)
+      console.log('data', data)
+    }
+    getData()
+  },[])
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
@@ -12,12 +29,12 @@ const Banner = () => {
     history.push('/')
   }
 
-  const [isLoggedIn, setIsLoggedIn] = useState(null)
-
   useEffect(() => {
     if (userIsAuthenticated()) return setIsLoggedIn(true)
     if (!userIsAuthenticated()) return setIsLoggedIn(false)
   }, [userIsAuthenticated, isLoggedIn])
+
+  // if (!userInfo) return null
 
   return (
     <div className="banner-wrapper">
@@ -37,7 +54,9 @@ const Banner = () => {
 
         <>
           <div className="reglogin-banner-link">
-            <Link to="/user-profile">Profile</Link>
+            {/* {userInfo.map( info => { 
+              <Link to={`/user-profile/${info.id}`}>Profile</Link>
+            })} */}
             <button onClick={handleLogout} className="logout-button">Log out</button>
           </div>
           
