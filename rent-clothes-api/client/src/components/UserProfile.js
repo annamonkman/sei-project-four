@@ -80,16 +80,16 @@ const UserProfile = () => {
   return (
     <>
       <div className="user-profile-page-wrapper">
-        <h3 className="welcome-back-message">Welcome back {userInfo.first_name}!</h3>
+        <h2 className="welcome-back-message">Welcome back {userInfo.first_name}!</h2>
         <div className="account-details-wrapper">
-          <h4>Your account details</h4>
-          <p>username: {userInfo.username}</p>
-          <p>first name: {userInfo.first_name}</p>
-          <p>last name: {userInfo.last_name}</p>
-          <p>email: {userInfo.email}</p>
+          <h3>Your account details:</h3>
+          <p><span className="user-detail">Username:</span> {userInfo.username}</p>
+          <p><span className="user-detail">First Name:</span> {userInfo.first_name}</p>
+          <p><span className="user-detail">Last Name:</span> {userInfo.last_name}</p>
+          <p><span className="user-detail">Email:</span> {userInfo.email}</p>
         </div>
         <div className="wishlist-wrapper">
-          <h4>Your wishlist:</h4>
+          <h3>Your wishlist:</h3>
           <div className="wishlist-items-cards-list">
             {userInfo.wishlist_items.map(item => {
               console.log('ITEMMAP', item)
@@ -99,7 +99,7 @@ const UserProfile = () => {
           <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value="removeFromWishlist">Remove from wishlist</button>
         </div>
         <div className="rented-items-wrapper">
-          <h4>Your Rented items:</h4>
+          <h3>Your Rented items:</h3>
           <div className="rented-items-cards-list">
 
           </div>

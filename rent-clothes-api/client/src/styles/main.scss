@@ -175,6 +175,35 @@ header {
 
 // * ---------------------------------------------------------------------------USER PROFILE
 
+.user-profile-page-wrapper {
+  max-width: 900px;
+  border: 1px solid pink;
+  margin: 0 auto;
+}
+.welcome-back-message {
+  text-align: center;
+  margin-top: 40px;
+}
+.account-details-wrapper {
+  border: 1px solid rgb(187, 187, 187);
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.wishlist-wrapper, .rented-items-wrapper {
+  border: 1px solid rgb(199, 112, 112);
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+.user-detail {
+  display: inline-block;
+  width: 150px;
+}
+
+
 // * ---------------------------------------------------------------------------REGISTRATION
 
 .register-form-container {
