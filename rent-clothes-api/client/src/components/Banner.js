@@ -53,35 +53,31 @@ const Banner = () => {
       <div className="banner-wrapper">
         <div className="banner-content">
           <div className="logo-banner-link">
-            <Link to="/">
-              <h1 id="logo">LOGO</h1>
+            <Link to="/" id="logo">
+              LOGO
             </Link>
           </div>
           {!isLoggedIn || !userInfo ?
-            <div className="reglogin-banner-link">
-              <Link to="/sign-in">Sign-in</Link>
+            <div className="user-links">
+              <Link to="/sign-in" className="user-link-item sign-in-link"></Link>
             </div>
             :
             <>
-              <div className="reglogin-banner-link">
-                <Link to={`/user-profile/${userInfo.id}`}>Profile</Link>
-                <button onClick={handleLogout} className="logout-button">Log out</button>
+              <div className="user-links">
+                <Link to={`/user-profile/${userInfo.id}`} className="user-link-item profile-page-link"></Link>
+                <button onClick={handleLogout} className="logout-button user-link-item">Log out</button>
               </div>
             </>
           }
-
         </div>
-        
       </div>
       
-      <div className="navbar-wrapper">
-        <div className="navbar-link">
-          <Link to="/clothes">Clothing</Link>
-        </div>
-        <div className="navbar-link">
-          <Link to="/how-it-works">How it Works</Link>
-        </div>
-      </div>
+      <section className="nav-links-wrapper">
+        <ul className="nav-links-list">
+          <li className="nav-link"><Link to="/clothes">Clothing</Link></li>
+          <li className="nav-link"><Link to="/how-it-works">How it Works</Link></li>
+        </ul>
+      </section>
 
     </header>
       
