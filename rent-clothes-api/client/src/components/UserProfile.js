@@ -1,12 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { getTokenFromLocalStorage } from '../helpers/auth'
+import { getTokenFromLocalStorage, getPayloadFromToken } from '../helpers/auth'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-// import ItemCard from './ItemCard'
+import ItemCard from './ItemCard'
 
 const UserProfile = () => {
+
+
+  const [item, setItem] = useState({
+    id: '',
+    name: '',
+    image_01: '',
+    image_02: '',
+    image_03: '',
+    garment_type: '',
+    brand: '',
+    size: '',
+    price: '',
+    rrp: '',
+    colour: '',
+    material: '',
+    is_available: '',
+    description: '',
+    current_renter: '',
+  })
 
   const [userInfo, setUserInfo] = useState(null)
   const params = useParams()
@@ -21,6 +40,39 @@ const UserProfile = () => {
     }
     getData()
   },[])
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(`/api/items/${params.id}`)
+        setItem(response.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  }, [])
+
+  if (!item) return null
+
+  const handleRemoveFromWishlist = async event => {
+    const payload = getPayloadFromToken()
+    // PUT request to api/auth/id of user/wishlist/
+    // need id of item/user?, wishlist_items: id of item?
+
+    console.log('ETV', event.target.value)
+    try {
+      await axios.put(`/api/auth/${payload.sub}/wishlist/`, { id: item.id }, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      }
+      )
+    } catch (err) {
+      console.log(err)
+    }
+    
+  }
 
   console.log('userINfo', userInfo)
   if (!userInfo) return null
@@ -39,11 +91,12 @@ const UserProfile = () => {
         <div className="wishlist-wrapper">
           <h4>Your wishlist:</h4>
           <div className="wishlist-items-cards-list">
-            {/* {userInfo.filter(item => {
-              return <ItemCard key={item.wishlist_items} {...item} />
-            })} */}
+            {userInfo.wishlist_items.map(item => {
+              console.log('ITEMMAP', item)
+              return <ItemCard key={item} />
+            })}
           </div>
-          <button className="remove-from-wishlist-button">Remove from wishlist</button>
+          <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value="removeFromWishlist">Remove from wishlist</button>
         </div>
         <div className="rented-items-wrapper">
           <h4>Your Rented items:</h4>

@@ -22,11 +22,12 @@ const ItemShow = () => {
     rrp: '',
     colour: '',
     material: '',
+    is_available: '',
     description: '',
     current_renter: '',
   })
   // const [userInfo, setUserInfo] = useState(null)
-  // create new object and spread in this , get rid of id -- delete object name and key 
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -67,16 +68,22 @@ const ItemShow = () => {
   const handleRentNow = async event => {
     console.log('ETV', event.target.value)
     console.log('rent now function')
+    // delete item.id
+    const payload = getPayloadFromToken()
     // PUT to /api/items/idofitem/currentrenter/
     // need all data from item + current_renter: id of user
+    // create new object and spread in this , get rid of id -- delete object name and key 
+    console.log('item.id', item.id)
+    const itemToUpdate = { ...item }
+    delete itemToUpdate.id
+    itemToUpdate.current_renter = payload.sub
     try {
-      await axios.put(`/api/items/${item.id}/currentrenter/`, item, {
+      await axios.put(`/api/items/${item.id}/currentrenter/`, itemToUpdate, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
       }
       )
-      console.log('ITEmmm>>>', item)
     } catch (err) {
       console.log(err)
     }

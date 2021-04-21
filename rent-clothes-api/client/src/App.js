@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
-import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
 import ItemIndex from './components/ItemIndex'
@@ -19,7 +18,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Banner />
-      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />

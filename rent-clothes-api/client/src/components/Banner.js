@@ -47,25 +47,36 @@ const Banner = () => {
   console.log('user info', userInfo)
 
   return (
-    <div className="banner-wrapper">
-      <div className="logo-banner-link">
-        <Link to="/">
-          <h1>LOGO</h1>
-        </Link>
-      </div>
-      {!isLoggedIn || !userInfo ?
-        <div className="reglogin-banner-link">
-          <Link to="/sign-in">Sign-in</Link>
+    <>
+      <div className="banner-wrapper">
+        <div className="logo-banner-link">
+          <Link to="/">
+            <h1>LOGO</h1>
+          </Link>
         </div>
-        :
-        <>
+        {!isLoggedIn || !userInfo ?
           <div className="reglogin-banner-link">
-            <Link to={`/user-profile/${userInfo.id}`}>Profile</Link>
-            <button onClick={handleLogout} className="logout-button">Log out</button>
+            <Link to="/sign-in">Sign-in</Link>
           </div>
-        </>
-      }
-    </div>
+          :
+          <>
+            <div className="reglogin-banner-link">
+              <Link to={`/user-profile/${userInfo.id}`}>Profile</Link>
+              <button onClick={handleLogout} className="logout-button">Log out</button>
+            </div>
+          </>
+        }
+      </div>
+      
+      <div className="navbar-wrapper">
+        <div className="navbar-link">
+          <Link to="/clothes">Clothing</Link>
+        </div>
+        <div className="navbar-link">
+          <Link to="/how-it-works">How it Works</Link>
+        </div>
+      </div>
+    </>
   )
 }
 export default Banner
