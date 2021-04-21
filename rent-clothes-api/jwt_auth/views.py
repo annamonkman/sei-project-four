@@ -107,20 +107,3 @@ class WishListRemoveView(APIView):
             user.save()
             return Response(item, status=status.HTTP_200_OK)
         return Response(user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
-
-
-
-
-
-
-#     def post(self, request, pk):
-#         current_user = request.user
-#         item = wishlist(userid_id = current_user.id)
-#         item.save()
-#         return
-
-#     def post(self, request, item_id):
-#         item = 
-#         user_profile = get_or_create(UserProfile, user=request.user)
-#         user_profile.wishlist.add(item)

@@ -21,6 +21,7 @@ const ItemIndex = () => {
     <>
       <div className="index-page-wrapper">
         <div className="index-filters-wrapper">
+          
         </div>
         <div className="items-grid-wrapper">
           { items.map( item => (

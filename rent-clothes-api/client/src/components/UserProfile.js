@@ -39,9 +39,11 @@ const UserProfile = () => {
         <div className="wishlist-wrapper">
           <h4>Your wishlist:</h4>
           <div className="wishlist-items-cards-list">
-            {/* {userInfo.wishlist_items} */}
-            {/* <ItemCard /> */}
+            {/* {userInfo.filter(item => {
+              return <ItemCard key={item.wishlist_items} {...item} />
+            })} */}
           </div>
+          <button className="remove-from-wishlist-button">Remove from wishlist</button>
         </div>
         <div className="rented-items-wrapper">
           <h4>Your Rented items:</h4>
