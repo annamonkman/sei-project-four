@@ -6,20 +6,79 @@
 }
 
 
-// * ---------------------------------------------------------------------------BANNER
-.banner-wrapper {
-  max-width: 935px;
-  height: 75px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar-wrapper {
 
+// * ---------------------------------------------------------------------------BANNER
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1000;
+  vertical-align: baseline;
+  text-align: center;
+  border: 1px solid red;
 }
+.banner-wrapper {
+  position: relative;
+}
+.banner-content {
+  max-height: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  padding: 12px 30px;
+  border: 1px solid green;
+}
+#id {
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-size: 28px;
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+// .banner-wrapper {
+//   max-width: 935px;
+//   width: 100%;
+//   height: 75px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+//   display: flex;
+//   flex-direction: row;
+//   // justify-content: space-between;
+//   align-items: center;
+//   border: 1px solid red;
+//   background-color: rgb(228, 228, 228);
+// }
+// .navbar-wrapper {
+//   max-width: 935px;
+//   height: 50px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   align-items: center;
+//   border: 1px solid red;
+//   text-align: center;
+// }
+// .logo {
+//   padding: 150px;
+//   background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619024540/Items/Logo02_pxoo4k.png');
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: center;
+// }
+// .reglogin-banner-link {
+//   text-align: right;
+// }
 
 // * ---------------------------------------------------------------------------HOME
 

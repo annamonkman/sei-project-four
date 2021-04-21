@@ -47,25 +47,31 @@ const Banner = () => {
   console.log('user info', userInfo)
 
   return (
-    <>
+    
+    <header>
+
       <div className="banner-wrapper">
-        <div className="logo-banner-link">
-          <Link to="/">
-            <h1>LOGO</h1>
-          </Link>
-        </div>
-        {!isLoggedIn || !userInfo ?
-          <div className="reglogin-banner-link">
-            <Link to="/sign-in">Sign-in</Link>
+        <div className="banner-content">
+          <div className="logo-banner-link">
+            <Link to="/">
+              <h1 id="logo">LOGO</h1>
+            </Link>
           </div>
-          :
-          <>
+          {!isLoggedIn || !userInfo ?
             <div className="reglogin-banner-link">
-              <Link to={`/user-profile/${userInfo.id}`}>Profile</Link>
-              <button onClick={handleLogout} className="logout-button">Log out</button>
+              <Link to="/sign-in">Sign-in</Link>
             </div>
-          </>
-        }
+            :
+            <>
+              <div className="reglogin-banner-link">
+                <Link to={`/user-profile/${userInfo.id}`}>Profile</Link>
+                <button onClick={handleLogout} className="logout-button">Log out</button>
+              </div>
+            </>
+          }
+
+        </div>
+        
       </div>
       
       <div className="navbar-wrapper">
@@ -76,7 +82,10 @@ const Banner = () => {
           <Link to="/how-it-works">How it Works</Link>
         </div>
       </div>
-    </>
+
+    </header>
+      
+    
   )
 }
 export default Banner
