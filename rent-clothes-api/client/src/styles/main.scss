@@ -143,6 +143,65 @@ header {
 
 // * ---------------------------------------------------------------------------SHOW
 
+.item-show-page-wrapper {
+  max-width: 1000px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.item-show-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  border: 1px solid orange;
+}
+.item-show-image-wrapper img {
+  max-width: 400px;
+  padding: 60px;
+  margin-right: 10px;
+}
+.item-show-info-wrapper {
+  border: 1px solid purple;
+  padding: 30px;
+}
+.designer {
+  text-transform: uppercase;
+}
+.item-info {
+  margin-top: 40px;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+}
+.pricing p {
+  display: inline-block;
+  margin-right: 50px;
+}
+.rent-and-add-to-wishlist-buttons-wrapper {
+  margin-top: 20px;
+}
+.rent-now-button {
+  width: 180px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-right: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.add-to-wishlist-button {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.add-to-wishlist-button:focus {
+  border-radius: 0;
+  border: 1px, solid, black;
+  outline: none;
+}
+
 // * ---------------------------------------------------------------------------CARD
 
 .item-card-wrapper {
