@@ -7,11 +7,11 @@ const RegLogin = () => {
   return (
     <div className="reglogin-page-wrapper">
       <div className="reglogin-login-wrapper">
-        <h2 className="reglogin-title">Login</h2>
+        <h3 className="reglogin-title">Login</h3>
         <Login />
       </div>
       <div className="reglogin-register-wrapper">
-        <h2 className="reglogin-title">Create an Account</h2>
+        <h3 className="reglogin-title">Create an Account</h3>
         <Register />
       </div>
     </div>

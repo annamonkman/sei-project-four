@@ -4,6 +4,9 @@
 * {
   font-family: sans-serif;
 }
+#root .App {
+  min-height: 100vh;
+}
 
 
 
@@ -15,7 +18,7 @@ header {
   z-index: 1000;
   vertical-align: baseline;
   text-align: center;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .banner-wrapper {
   position: relative;
@@ -26,6 +29,8 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  // width: 990px;
+  margin: 0 auto;
   z-index: 1;
   top: 0;
   left: 0;
@@ -33,7 +38,12 @@ header {
   right: 0;
   position: relative;
   padding: 30px 30px;
-  border: 1px solid green;
+  // border: 1px solid green;
+  background-color: palegoldenrod;
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619046034/Items/banner2_nejtcl.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #logo {
   margin: 0;
@@ -43,7 +53,7 @@ header {
   font-size: 35px;
   font-family: sans-serif;
   line-height: 1;
-  border: 1px solid orange;
+  // border: 1px solid orange;
   text-decoration: none;
   color: black;
 }
@@ -57,11 +67,11 @@ header {
   padding-right: 100px;
   font-size: 15px;
   line-height: normal;
-  border: 1px solid yellowgreen;
+  // border: 1px solid yellowgreen;
 }
 .user-link-item {
-  margin: 30px;
-  border: 1px solid purple;
+  margin: 20px;
+  // border: 1px solid purple;
 }
 .nav-links-wrapper {
   display: block;
@@ -84,15 +94,18 @@ header {
 }
 .profile-page-link, .sign-in-link{
   background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619031302/Items/profile-link_iy8jms.png');
-  padding: 25px;
+  padding: 16px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 .logout-button {
-  border: 3px solid black;
-  background-color: white;
-  font-size: 20px;
+  border: 3px solid black; 
+  // border: none;
+  // text-decoration: underline;
+  // font-weight: 800;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -113,12 +126,14 @@ header {
 }
 .home-images-list-items {
   list-style: none;
+  display: inline-block;
 }
 .home-image {
-  padding: 300px;
+  padding: 200px;
   width: 50%;
   display: block;
   margin: 0 auto;
+  background-size: contain;
 }
 .himg1 {
   background-color: rgb(143, 190, 129);
@@ -140,6 +155,25 @@ header {
 }
 
 // * ---------------------------------------------------------------------------INDEX
+
+.index-page-wrapper {
+  max-width: 1000px;
+  border: 1px solid green;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.items-grid-wrapper {
+  max-width: 800px;
+  border: 1px solid red;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+// .grid-wrapper ul li {
+//   width: calc(33.33% - 20px);
+//   margin-bottom: 30px;
+// }
 
 // * ---------------------------------------------------------------------------SHOW
 
@@ -181,6 +215,7 @@ header {
 .rent-and-add-to-wishlist-buttons-wrapper {
   margin-top: 20px;
 }
+
 .rent-now-button {
   width: 180px;
   text-transform: uppercase;
@@ -201,11 +236,21 @@ header {
   border: 1px, solid, black;
   outline: none;
 }
+.login-or-reg-button {
+  width: 180px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
 
 // * ---------------------------------------------------------------------------CARD
 
 .item-card-wrapper {
-  border: 1px solid green;
+  // border: 1px solid green;
   width: 250px;
   display: flex;
   align-items: center;
@@ -222,14 +267,33 @@ header {
   background-position: top;
   position: relative;
   text-align: center;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .item-card-info-wrapper {
   text-decoration: none;
   display: inline-block;
-  border: 1px solid blue;
+  // border: 1px solid blue;
   width: 200px;
 }
+.item-card-info-wrapper p {
+  font-weight: 400;
+  font-size: 15px;
+}
+.item-card-name {
+  margin-bottom: -12px;
+  margin-top: -12px;
+}
+.item-card-price-wrapper {
+  margin-top: -25px;
+}
+.item-card-price-wrapper p {
+  display: inline-block;
+  margin-right: 30px;
+}
+.item-card-rrp {
+  text-decoration: line-through;
+}
+
 // * ---------------------------------------------------------------------------HOW IT WORKS
 
 // * ---------------------------------------------------------------------------USER PROFILE
@@ -302,10 +366,27 @@ input:focus {
   text-transform: uppercase;
   color: white;
   background-color: black;
+  margin-top: 20px;
 }
 .submit-button:hover {
   background-color: rgb(83, 83, 83);
 }
+
+// * ---------------------------------------------------------------------------REG LOGIN
+.reglogin-page-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.reglogin-page-wrapper h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
 
 // * ---------------------------------------------------------------------------CHECKOUT
 
@@ -506,3 +587,24 @@ input:focus {
 // }
 
 // * ---------------------------------------------------------------------------FOOTER
+
+.footer {
+  width: 100%;
+  // max-width: 935px;
+  font-size: 12px;
+  padding: 3px 10px;
+  background-color: rgb(240, 240, 240);
+  // border: 1px solid pink;
+  position:fixed;
+  z-index: 100;
+  // padding: 0;
+  min-height: 15px;
+  bottom: 0;
+  text-align: center;
+  font-size: 13px;
+}
+.github {
+  margin-left: 50px;
+  color: black;
+  text-decoration: none;
+}

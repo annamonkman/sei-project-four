@@ -105,7 +105,7 @@ const ItemShow = () => {
           <p className="price">Rent for £{ item.price }</p>
           <p className="rrp">Market Value: £{ item.rrp }</p>
         </div>
-        
+
         { userIsAuthenticated() ?
           <div className="rent-and-add-to-wishlist-buttons-wrapper">
             <button className="rent-now-button" onClick={handleRentNow} value="rentNow">Rent Now</button>
@@ -113,7 +113,7 @@ const ItemShow = () => {
           </div>
           : 
           <div className="rent-and-add-to-wishlist-buttons-wrapper">
-            <h3><Link to={'/sign-in'} className="login-or-reg-button">Login or Register</Link> to Rent item or add to wishlist</h3>
+            <h4><Link to={'/sign-in'} className="login-or-reg-button">Login or Register</Link> to rent item or add to wishlist</h4>
           </div>
         }
         <p className="item-info">Item Info</p>

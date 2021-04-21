@@ -54,7 +54,7 @@ const Banner = () => {
         <div className="banner-content">
           <div className="logo-banner-link">
             <Link to="/" id="logo">
-              LOGO
+              CAROUSEL
             </Link>
           </div>
           {!isLoggedIn || !userInfo ?
