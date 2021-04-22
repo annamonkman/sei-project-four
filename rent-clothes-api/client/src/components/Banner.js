@@ -75,7 +75,8 @@ const Banner = () => {
       <section className="nav-links-wrapper">
         <ul className="nav-links-list">
           <li className="nav-link"><Link to="/clothes">Clothing</Link></li>
-          <li className="nav-link"><Link to="/how-it-works">How it Works</Link></li>
+          <li className="nav-link"><Link to="/how-it-works">How We Work</Link></li>
+          <li className="nav-link"><Link to="/about-us">About Carousel Collective</Link></li>
         </ul>
       </section>
 

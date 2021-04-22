@@ -129,6 +129,11 @@ header {
   min-height: 100%;
   // border: 1px solid blue;
   margin-bottom: 100px;
+  // background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // background-color: rgb(212, 212, 212);
 }
 .home-images-ul {
   display: flex;
@@ -137,6 +142,7 @@ header {
   justify-content: center;
   margin: 20px 0;
   padding: 0;
+  // background-color: rgb(212, 212, 212);
 }
 .home-images-list-items {
   list-style: none;
@@ -153,38 +159,39 @@ header {
   text-align: center;
   // filter: none;
   .home-img-label {
-    display: none;
+    // display: none;
   }
 
 }
-.home-image:hover {
-  .home-img-label {
-    display: inline-block;
-  }
-  // filter: grayscale(100%);
-}
+// .home-image:hover {
+//   .home-img-label {
+//     display: inline-block;
+//   }
+//   // filter: grayscale(100%);
+// }
 .home-img-label {
   position: absolute;
   top: 8px;
   left: 16px;
-  background-color: rgb(255, 255, 255) !important;
+  // background-color: rgb(255, 255, 255) !important;
   padding: 5px 20px;
   margin: 0;
+  font-weight: 300;
   // font-family: 'Almendra', serif;
   text-transform: uppercase;
   color: black;
   font-size: 24px;
 }
 .himg1 {
-  background-color: rgb(143, 190, 129);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-color: rgb(143, 190, 129, 0);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_02_mvcnlt.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .himg1:hover {
   background-color: rgb(143, 190, 129);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618574382/Items/blue_mesh_hydrodynamic_ruched_mini_dress_01_aljxuw.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -192,35 +199,70 @@ header {
 
 .himg2 {
   background-color: rgb(129, 190, 182);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089029/Items/211148F107014_1_o0ug0n.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.himg2:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089029/Items/211148F107014_1_o0ug0n.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .himg3 {
   background-color: rgb(190, 129, 177);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089416/Items/211342F092277_1_ofljrr.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.himg3:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089416/Items/211342F092277_1_ofljrr.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .himg4 {
   background-color: rgb(190, 174, 129);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618574932/Items/green_allover_marble_trousers_03_rp8ppo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.himg4:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618574932/Items/green_allover_marble_trousers_01_fsv0ak.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .himg5 {
   background-color: rgb(88, 107, 90);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089547/Items/the-elder-statesman-off-white-organic-cotton-stripe-sweater_rqxuqn.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.himg5:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089547/Items/the-elder-statesman-off-white-organic-cotton-stripe-sweater_rqxuqn.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .himg6 {
   background-color: rgb(192, 202, 157);
-  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089661/Items/211418F067003_1-1_ojipkk.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.himg6:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619089661/Items/211418F067003_1-1_ojipkk.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -370,13 +412,19 @@ header {
 
 .how-it-works-page-wrapper {
   max-width: 1000px;
-  border: 1px solid red;
+  // border: 1px solid red;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .how-it-works-info {
   max-width: 800px;
-  border: 1px solid blue;
-  
+  // border: 1px solid blue;
+  margin: 0 auto;
+}
+.become-a-lender {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 // * ---------------------------------------------------------------------------USER PROFILE

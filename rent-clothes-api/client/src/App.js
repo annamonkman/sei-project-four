@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import ItemIndex from './components/ItemIndex'
 import ItemShow from './components/ItemShow'
 import HowItWorks from './components/HowItWorks'
+import About from './components/About'
 import Register from './components/Register'
 import Login from './components/Login'
 import RegLogin from './components/RegLogin'
@@ -42,6 +43,9 @@ const App = () => {
         </Route>
         <Route exact path ="/how-it-works">
           <HowItWorks />
+        </Route>
+        <Route exact path ="/about-us">
+          <About />
         </Route>
         <Route exact path ="/checkout">
           <Checkout />
