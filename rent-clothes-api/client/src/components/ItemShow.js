@@ -102,7 +102,7 @@ const ItemShow = () => {
         <p className="name-of-item">{ item.name }</p>
         <p className="size">UK { item.size }</p>
         <div className="pricing">
-          <p className="price">Rent for £{ item.price }</p>
+          <p className="price">Rent for <b>£{ item.price }</b> (7 days)</p>
           <p className="rrp">Market Value: £{ item.rrp }</p>
         </div>
 

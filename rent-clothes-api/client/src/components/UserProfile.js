@@ -39,7 +39,7 @@ const UserProfile = () => {
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
       })
       setUserInfo(data)
-      console.log('data', data)
+      // console.log('data', data)
     }
     getData()
   },[])
@@ -73,12 +73,10 @@ const UserProfile = () => {
   //* ------------------------------------------------------------------REMOVE FROM WISHLIST
   const handleRemoveFromWishlist = async event => {
     const payload = getPayloadFromToken()
-    // PUT request to api/auth/id of user/wishlist/
-    // need id of item/user?, wishlist_items: id of item?
 
     console.log('ETV', event.target.value)
     try {
-      await axios.put(`/api/auth/${payload.sub}/wishlistremove/`, { id: item.id }, {
+      await axios.put(`/api/auth/${payload.sub}/wishlistremove/`, { id: event.target.value }, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
@@ -92,15 +90,15 @@ const UserProfile = () => {
   //* ------------------------------------------------------------------REMOVE FROM RENTALS
   const handleRemoveFromRentals = async event => {
     console.log('ETV', event.target.value)
-    console.log('rent now function')
-    const payload = getPayloadFromToken()
+    // const payload = getPayloadFromToken()
     console.log('item.id', item.id)
     const itemToUpdate = { ...item }
     delete itemToUpdate.id
-    // add itemToUpdate.current_rentals = null
-    itemToUpdate.current_renter = payload.sub
+    itemToUpdate.current_renter = 'null'
+    // itemToUpdate.current_renter = payload.sub
+    console.log('item to update', itemToUpdate)
     try {
-      await axios.put(`/api/items/${item.id}/currentrenter/`, itemToUpdate, {
+      await axios.put(`/api/items/${event.target.value}/currentrenter/`, itemToUpdate, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
@@ -111,9 +109,11 @@ const UserProfile = () => {
     }
   }
 
-  console.log('userINfo', userInfo)
+  // console.log('userINfo', userInfo)
   if (!userInfo) return null
   
+  //* ------------------------------------------------------------------RETURN
+
   return (
     <>
       <div className="user-profile-page-wrapper">
@@ -133,8 +133,8 @@ const UserProfile = () => {
               return <ItemCard key={item} />
             })} */}
             {items.map(item => {
-              console.log('item.id', item.id)
-              console.log('userInfo.wishlist_items', userInfo.wishlist_items)
+              // console.log('item.id', item.id)
+              // console.log('userInfo.wishlist_items', userInfo.wishlist_items)
               if (userInfo.wishlist_items.includes(item.id)) {
                 return (
                   <div className="userprofile-wishlist-rent-item">
