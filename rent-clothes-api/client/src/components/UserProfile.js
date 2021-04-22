@@ -27,12 +27,13 @@ const UserProfile = () => {
     current_renter: '',
   })
 
+
   const [items, setItems] = useState(null)
 
   const [userInfo, setUserInfo] = useState(null)
   const params = useParams()
 
-  //* ------------------------------------------------------------------GET DATA
+  //* ------------------------------------------------------------------GET USER
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(`/api/auth/${params.id}/`,{
@@ -44,6 +45,7 @@ const UserProfile = () => {
     getData()
   },[])
 
+  //* ------------------------------------------------------------------GET ITEM PARAMS.ID
   useEffect(() => {
     const getData = async () => {
       try {
@@ -56,6 +58,7 @@ const UserProfile = () => {
     getData()
   }, [])
 
+  //* ------------------------------------------------------------------GET ALL ITEMS
   useEffect(() => {
     const getData = async () => {
       try {
@@ -69,12 +72,13 @@ const UserProfile = () => {
   }, [])
 
   if (!item) return null
+  if (!items) return null
 
   //* ------------------------------------------------------------------REMOVE FROM WISHLIST
   const handleRemoveFromWishlist = async event => {
     const payload = getPayloadFromToken()
 
-    console.log('ETV', event.target.value)
+    // console.log('ETV', event.target.value)
     try {
       await axios.put(`/api/auth/${payload.sub}/wishlistremove/`, { id: event.target.value }, {
         headers: {
@@ -89,12 +93,18 @@ const UserProfile = () => {
 
   //* ------------------------------------------------------------------REMOVE FROM RENTALS
   const handleRemoveFromRentals = async event => {
-    console.log('ETV', event.target.value)
-    // const payload = getPayloadFromToken()
-    console.log('item.id', item.id)
-    const itemToUpdate = { ...item }
+    // console.log('items', items)
+    // console.log('ETV', event.target.value)
+    // // const payload = getPayloadFromToken()
+    // console.log('item.id', item.id)
+    const itemToUpdate = items.filter(i => {
+      console.log('i.id', i.id)
+      console.log('parseintetv', parseInt(event.target.value))
+      console.log('STUFF', i.id === parseInt(event.target.value))
+      return i.id === parseInt(event.target.value)
+    })[0]
     delete itemToUpdate.id
-    itemToUpdate.current_renter = 'null'
+    itemToUpdate.current_renter = null
     // itemToUpdate.current_renter = payload.sub
     console.log('item to update', itemToUpdate)
     try {
@@ -108,6 +118,39 @@ const UserProfile = () => {
       console.log(err)
     }
   }
+  // const handleRemoveFromRentals = async event => {
+    
+  //   console.log('ETV', event.target.value)
+  //   useEffect(() => {
+  //     const getData = async () => {
+  //       try {
+  //         const response = await axios.get(`/api/items/${event.target.value}`)
+  //         setItem(response.data)
+  //       } catch (err) {
+  //         console.log(err)
+  //       }
+  //     }
+  //     getData()
+  //   }, [])
+  //   // const payload = getPayloadFromToken()
+  //   console.log('item.id', item.id)
+  //   const itemToUpdate = { ...item }
+  //   delete itemToUpdate.id
+  //   itemToUpdate.current_renter = 'null'
+  //   // itemToUpdate.current_renter = payload.sub
+  //   console.log('item to update', itemToUpdate)
+  //   try {
+  //     await axios.put(`/api/items/${event.target.value}/currentrenter/`, itemToUpdate, {
+  //       headers: {
+  //         Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+  //       },
+  //     }
+  //     )
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  //   if (!item) return null
+  // }
 
   // console.log('userINfo', userInfo)
   if (!userInfo) return null

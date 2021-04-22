@@ -368,6 +368,17 @@ header {
 
 // * ---------------------------------------------------------------------------HOW IT WORKS
 
+.how-it-works-page-wrapper {
+  max-width: 1000px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+.how-it-works-info {
+  max-width: 800px;
+  border: 1px solid blue;
+  
+}
+
 // * ---------------------------------------------------------------------------USER PROFILE
 
 .user-profile-page-wrapper {
