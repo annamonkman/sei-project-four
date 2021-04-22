@@ -32,6 +32,7 @@ const UserProfile = () => {
   const [userInfo, setUserInfo] = useState(null)
   const params = useParams()
 
+  //* ------------------------------------------------------------------GET DATA
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(`/api/auth/${params.id}/`,{
@@ -69,6 +70,7 @@ const UserProfile = () => {
 
   if (!item) return null
 
+  //* ------------------------------------------------------------------REMOVE FROM WISHLIST
   const handleRemoveFromWishlist = async event => {
     const payload = getPayloadFromToken()
     // PUT request to api/auth/id of user/wishlist/
@@ -76,7 +78,7 @@ const UserProfile = () => {
 
     console.log('ETV', event.target.value)
     try {
-      await axios.put(`/api/auth/${payload.sub}/wishlist/`, { id: item.id }, {
+      await axios.put(`/api/auth/${payload.sub}/wishlistremove/`, { id: item.id }, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
@@ -85,7 +87,28 @@ const UserProfile = () => {
     } catch (err) {
       console.log(err)
     }
-    
+  }
+
+  //* ------------------------------------------------------------------REMOVE FROM RENTALS
+  const handleRemoveFromRentals = async event => {
+    console.log('ETV', event.target.value)
+    console.log('rent now function')
+    const payload = getPayloadFromToken()
+    console.log('item.id', item.id)
+    const itemToUpdate = { ...item }
+    delete itemToUpdate.id
+    // add itemToUpdate.current_rentals = null
+    itemToUpdate.current_renter = payload.sub
+    try {
+      await axios.put(`/api/items/${item.id}/currentrenter/`, itemToUpdate, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      }
+      )
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   console.log('userINfo', userInfo)
@@ -103,7 +126,7 @@ const UserProfile = () => {
           <p><span className="user-detail">Email:</span> {userInfo.email}</p>
         </div>
         <div className="wishlist-wrapper">
-          <h3>Your wishlist:</h3>
+          <h3>Your Wishlist:</h3>
           <div className="wishlist-items-cards-list">
             {/* {userInfo.wishlist_items.map(item => {
               console.log('ITEMMAP', item)
@@ -122,7 +145,7 @@ const UserProfile = () => {
                     <span>{item.name}</span>
                     <span>UK {item.size}</span>
                     <span>£{item.price}</span>
-                    <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value="removeFromWishlist">X</button>
+                    <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value={`${item.id}`}>X</button>
                   </div>
                 )
                 
@@ -131,7 +154,7 @@ const UserProfile = () => {
           </div>
         </div>
         <div className="rented-items-wrapper">
-          <h3>Your Rented items:</h3>
+          <h3>Your Basket:</h3>
           <div className="rented-items-cards-list">
             {items.map(item => {
               if (item.current_renter === userInfo.id) {
@@ -144,7 +167,7 @@ const UserProfile = () => {
                     <span>{item.name}</span>
                     <span>UK {item.size}</span>
                     <span>£{item.price}</span>
-                    <button className="remove-from-rented-button" value="removeFromRented">X</button>
+                    <button className="remove-from-rented-button" value={`${item.id}`} onClick={handleRemoveFromRentals}>X</button>
                   </div>
                 )
               }
