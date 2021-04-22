@@ -1,9 +1,9 @@
 // * ---------------------------------------------------------------------------GENERAL
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra&family=Lato:wght@300;400&family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra&family=Lato:wght@300;400&family=Libre+Caslon+Display&family=Trocchi&display=swap');
+
 
 * {
   font-family: 'Lato', sans-serif;
@@ -42,7 +42,7 @@ header {
   bottom: 0;
   right: 0;
   position: relative;
-  padding: 30px 30px;
+  padding: 25px 8px;
   // border: 1px solid green;
   background-color: palegoldenrod;
   background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619046034/Items/banner2_nejtcl.png');
@@ -55,8 +55,8 @@ header {
   position: relative;
   z-index: 3;
   text-align: center;
-  font-size: 35px;
-  font-family: sans-serif;
+  font-size: 65px;
+  font-family: 'Almendra', serif;
   line-height: 1;
   // border: 1px solid orange;
   text-decoration: none;
