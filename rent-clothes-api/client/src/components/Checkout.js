@@ -30,11 +30,11 @@ const Checkout = () => {
                 <input type="text" name="city" />
               </div>
               <div>
-                <label htmlFor="state">State</label>
+                <label htmlFor="state">County</label>
                 <input type="text" name="state" />
               </div>
               <div>
-                <label htmlFor="zip">Zip</label>
+                <label htmlFor="zip">Postcode</label>
                 <input type="text" name="zip" />
               </div>
             </div>
@@ -56,8 +56,8 @@ const Checkout = () => {
               </div>
             </div>
             <div className="btns">
-              <button>Purchase</button>
-              <button>Back to cart</button>
+              <button className="on-checkout-bttn">Purchase</button>
+              <button className="on-checkout-bttn">Back to cart</button>
             </div>
           </form>
         </div>

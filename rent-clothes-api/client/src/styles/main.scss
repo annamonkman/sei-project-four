@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almendra&family=Lato:wght@300;400&family=Libre+Caslon+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almendra&family=Lato:wght@300;400&family=Libre+Caslon+Display&family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Display&family=Trocchi&display=swap');
 
 
 * {
@@ -80,6 +81,7 @@ header {
 }
 .nav-links-wrapper {
   display: block;
+  background-color: rgb(248, 248, 248);
 }
 .nav-links-list {
   list-style: none;
@@ -88,7 +90,9 @@ header {
 .nav-link {
   display: inline-block;
   padding: 5px;
-  margin: 0 40px;
+  margin: 0 50px;
+  font-size: 16px;
+
 }
 .nav-link a {
   text-decoration: none;
@@ -111,7 +115,8 @@ header {
   // font-weight: 800;
   background-color: rgba(0, 0, 0, 0);
   font-size: 16px;
-  font-weight: bold;
+  font-weight:800;
+  border-radius: 0.8em;
 }
 
 
@@ -122,41 +127,103 @@ header {
   min-width: 100%;
   display: block;
   min-height: 100%;
-  border: 1px solid blue;
+  // border: 1px solid blue;
+  margin-bottom: 100px;
 }
-.grid-wrapper ul {
+.home-images-ul {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
+  // border: 1px solid red;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0;
 }
 .home-images-list-items {
   list-style: none;
   display: inline-block;
 }
 .home-image {
-  padding: 200px;
-  width: 50%;
+  padding: 350px 280px;
+  // width: 50%;
   display: block;
   margin: 0 auto;
   background-size: contain;
+  // flex-grow: 2;
+  position: relative;
+  text-align: center;
+  // filter: none;
+  .home-img-label {
+    display: none;
+  }
+
+}
+.home-image:hover {
+  .home-img-label {
+    display: inline-block;
+  }
+  // filter: grayscale(100%);
+}
+.home-img-label {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 5px 20px;
+  margin: 0;
+  // font-family: 'Almendra', serif;
+  text-transform: uppercase;
+  color: black;
+  font-size: 24px;
 }
 .himg1 {
   background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+.himg1:hover {
+  background-color: rgb(143, 190, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .himg2 {
   background-color: rgb(129, 190, 182);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .himg3 {
   background-color: rgb(190, 129, 177);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .himg4 {
   background-color: rgb(190, 174, 129);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .himg5 {
   background-color: rgb(88, 107, 90);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .himg6 {
   background-color: rgb(192, 202, 157);
+  background-image: url('https://res.cloudinary.com/project-3/image/upload/v1618492837/Items/gaia_red_velvet_dress_01_cc141q.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 // * ---------------------------------------------------------------------------INDEX
@@ -184,7 +251,7 @@ header {
 
 .item-show-page-wrapper {
   max-width: 1000px;
-  border: 1px solid green;
+  // border: 1px solid green;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -194,7 +261,7 @@ header {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  border: 1px solid orange;
+  // border: 1px solid orange;
 }
 .item-show-image-wrapper img {
   max-width: 400px;
@@ -202,7 +269,7 @@ header {
   margin-right: 10px;
 }
 .item-show-info-wrapper {
-  border: 1px solid purple;
+  // border: 1px solid purple;
   padding: 30px;
 }
 .designer {
@@ -318,18 +385,20 @@ header {
   margin: 0 auto;
   font-size: 16px;
   padding: 10px 20px;
+  margin-bottom: 20px;
 }
 .wishlist-wrapper, .rented-items-wrapper {
   border: 1px solid rgb(211, 211, 211);
   max-width: 700px;
   margin: 0 auto;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 .rented-items-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 90px;
 }
 .user-detail {
   display: inline-block;
@@ -369,111 +438,17 @@ header {
   text-decoration: none;
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
-}
-
-
-
-// * ---------------------------------------------------------------------------REGISTRATION
-
-.register-form-container {
-
-}
-.login-form-container {
-
-}
-.form-field {
-  margin-bottom: 12px;
-  display: block;
-}
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-input {
-  padding: 5px;
-  width: 400px;
-  border-radius: 0;
-  border: 1px, solid, black;
-}
-input:focus {
-  border-radius: 0;
-  border: 1px, solid, black;
-  outline: none;
-}
-.is-error {
-  border: 1px, solid, red;
-}
-.error-message {
-  color: red;
-}
-
-.submit-button {
-  width: 100px;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  margin-top: 20px;
-}
-.submit-button:hover {
-  background-color: rgb(83, 83, 83);
-}
-
-// * ---------------------------------------------------------------------------REG LOGIN
-.reglogin-page-wrapper {
-  max-width: 950px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  justify-content: space-between;
-}
-.reglogin-page-wrapper h3 {
-  text-align: center;
-  font-weight: 500;
-  font-size: 24px;
 }
 
 
 // * ---------------------------------------------------------------------------CHECKOUT
 
-// @import url('https://fonts.googleapis.com/css?family=Arimo');
-// $coral: #eb9478;
-// $maroon: #8e2807;
-// $title: #493b76;
-
 .checkout-wrapper {
     display: flex;
     justify-content: center;
 }
-
-// .checkout-wrapper {
-//     margin-top: 5%;
-//     width: 60%;
-//     display: flex;
-//     justify-content: center;
-//     font-family: "Arimo";
-//     background-color: grey;
-//     -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
-//     -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
-//     box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
-//     animation: slideUp 2000ms ease;
-// }
-
-// @keyframes slideUp {
-//     0% {
-//         -webkit-transform: translateY(100%);
-//         transform: translateY(100%);
-//         visibility: visible;
-//     }
-
-//     100% {
-//         -webkit-transform: translateY(0);
-//         transform: translateY(0);
-
-//     }
-// }
 
 .shipping-container {
     width: 65%;
@@ -554,10 +529,10 @@ form {
     flex-direction: column;
     align-items: flex-end;
 
-    button {
+    .on-checkout-bttn {
         margin: 3px 0;
         height: 30px;
-        width: 40%;
+        width: 30%;
         color: #ffffff;
         background-color: #000000;
         text-transform: uppercase;
@@ -568,7 +543,7 @@ form {
 }
 
 input:focus,
-button:focus {
+.on-checkout-bttn:focus {
     outline: none;
 }
 
@@ -617,6 +592,76 @@ button:focus {
         margin: 5px 0;
         min-height: 30px;
     }
+}
+
+
+
+// * ---------------------------------------------------------------------------REGISTRATION
+
+.register-form-container {
+  border: 1px solid red;
+}
+.login-form-container {
+
+}
+.form-field {
+  margin-bottom: 12px;
+  display: block;
+  width: 100%;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  padding: 5px;
+  width: 400px;
+  border-radius: 0;
+  border: 1px, solid, black;
+}
+input:focus {
+  border-radius: 0;
+  border: 1px, solid, black;
+  outline: none;
+}
+.is-error {
+  border: 1px, solid, red;
+}
+.error-message {
+  color: red;
+}
+
+#submit-button {
+  width: 100px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 30px !important;
+}
+.submit-button:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+// * ---------------------------------------------------------------------------REG LOGIN
+.reglogin-page-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: space-between;
+  border: 1px solid pink;
+}
+.reglogin-page-wrapper h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+.reglogin-login-wrapper, .reglogin-register-wrapper{
+  border: 1px solid greenyellow;
+  min-width: 40%;
 }
 
 // * ---------------------------------------------------------------------------FOOTER

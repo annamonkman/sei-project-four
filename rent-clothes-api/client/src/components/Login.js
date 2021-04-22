@@ -45,7 +45,7 @@ const Login = () => {
         </div>
         <div className="form-field">
           <input 
-            className="submit-button" 
+            id="submit-button" 
             type="submit" 
             value="Login"/>
         </div>

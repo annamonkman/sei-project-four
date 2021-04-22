@@ -110,7 +110,7 @@ const Register = () => {
         { errors.password_confirmation && <p className="error-message">{errors.password_confirmation}</p> }
         <div className="form-field">
           <input 
-            className="submit-button" 
+            id="submit-button" 
             type="submit" 
             value="Register"/>
         </div>
