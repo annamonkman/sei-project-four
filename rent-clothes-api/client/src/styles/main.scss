@@ -1,11 +1,16 @@
 // * ---------------------------------------------------------------------------GENERAL
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 * {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 #root .App {
   min-height: 100vh;
+  // min-width: 100vw;
 }
 
 
@@ -300,7 +305,7 @@ header {
 
 .user-profile-page-wrapper {
   max-width: 900px;
-  border: 1px solid pink;
+  // border: 1px solid pink;
   margin: 0 auto;
 }
 .welcome-back-message {
@@ -308,23 +313,66 @@ header {
   margin-top: 40px;
 }
 .account-details-wrapper {
-  border: 1px solid rgb(187, 187, 187);
+  border: 1px solid rgb(223, 223, 223);
   max-width: 500px;
   margin: 0 auto;
   font-size: 16px;
   padding: 10px 20px;
 }
 .wishlist-wrapper, .rented-items-wrapper {
-  border: 1px solid rgb(199, 112, 112);
+  border: 1px solid rgb(211, 211, 211);
   max-width: 700px;
   margin: 0 auto;
   margin-top: 10px;
   padding: 10px 20px;
 }
+.rented-items-wrapper {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
 .user-detail {
   display: inline-block;
   width: 150px;
 }
+.wishlist-rented-image {
+  height: 200px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+.userprofile-wishlist-rent-item {
+  // border: 1px solid greenyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.remove-from-rented-button, .remove-from-wishlist-button{
+  background-color: white;
+  border: 1px solid rgb(206, 206, 206);
+  color: rgb(167, 167, 167)
+}
+.go-to-checkout-button {
+  width: 180px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 
 
 // * ---------------------------------------------------------------------------REGISTRATION
@@ -395,10 +443,10 @@ input:focus {
 // $maroon: #8e2807;
 // $title: #493b76;
 
-// body {
-//     display: flex;
-//     justify-content: center;
-// }
+.checkout-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 // .checkout-wrapper {
 //     margin-top: 5%;
@@ -406,7 +454,7 @@ input:focus {
 //     display: flex;
 //     justify-content: center;
 //     font-family: "Arimo";
-//     background-color: $coral;
+//     background-color: grey;
 //     -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
 //     -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
 //     box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
@@ -427,164 +475,149 @@ input:focus {
 //     }
 // }
 
-// .shipping-container {
-//     width: 65%;
-//     padding: 5% 10%;
-// }
+.shipping-container {
+    width: 65%;
+    padding: 5% 10%;
+}
 
-// h1 {
-//     align-self: center;
-// }
+h1 {
+    align-self: center;
+}
 
-// form {
-//     width: 100%;
+form {
+    width: 100%;
 
-//     >* {
-//         margin-top: 20px;
-//     }
+    >* {
+        margin-top: 20px;
+    }
 
-//     input {
-//         width: 100%;
-//         min-height: 25px;
-//         border: 0;
-//         font-size: 1rem;
-//         letter-spacing: .15rem;
-//         font-family: "Arimo";
-//         margin-top: 5px;
-//         color: $maroon;
-//         border-radius: 4px;
-//     }
+    input {
+        width: 100%;
+        min-height: 25px;
+        border: 0;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        // font-family: "Arimo";
+        margin-top: 5px;
+        // border-radius: 4px;
+        border: 1px solid black;
+    }
 
-//     label {
-//         text-transform: uppercase;
-//         font-size: 12px;
-//         letter-spacing: 2px;
-//         color: $maroon;
-//     }
+    label {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 
-//     h1 {
-//         font-size: 24px;
-//         line-height: 10px;
-//         color: $title;
-//         letter-spacing: 1px;
-//     }
+    h1 {
+        font-size: 24px;
+        line-height: 10px;
+        // color: $title;
+        letter-spacing: 1px;
+    }
 
-//     h1:nth-of-type(2) {
-//         margin-top: 10%;
-//     }
-// }
+    h1:nth-of-type(2) {
+        margin-top: 10%;
+    }
+  }
 
-// .name {
-//     justify-content: space-between;
-//     display: flex;
-//     width: 100%;
+.name {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
 
-//     div {
-//         width: 45%;
-//     }
-// }
+    div {
+        width: 45%;
+    }
+}
 
-// .address-info {
-//     display: flex;
-//     justify-content: space-between;
+.address-info {
+    display: flex;
+    justify-content: space-between;
 
-//     div {
-//         width: 30%;
-//     }
-// }
+    div {
+        width: 30%;
+    }
+}
 
-// .cc-info {
-//     display: flex;
-//     justify-content: space-between;
+.cc-info {
+    display: flex;
+    justify-content: space-between;
 
-//     div {
-//         width: 45%;
-//     }
-// }
+    div {
+        width: 45%;
+    }
+}
 
-// .btns {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-//     button {
-//         margin: 3px 0;
-//         height: 30px;
-//         width: 40%;
-//         color: #cfc9e1;
-//         background-color: #4a3b76;
-//         text-transform: uppercase;
-//         border: 0;
-//         border-radius: .3rem;
-//         letter-spacing: 2px;
+    button {
+        margin: 3px 0;
+        height: 30px;
+        width: 40%;
+        color: #ffffff;
+        background-color: #000000;
+        text-transform: uppercase;
+        border: 0;
+        letter-spacing: 2px;
 
-//         &:hover {
-//             animation-name: btn-hov;
-//             animation-duration: 550ms;
-//             animation-fill-mode: forwards;
-//         }
-//     }
-// }
+    }
+}
 
-// @keyframes btn-hov {
-//     100% {
-//         background-color: #cfc9e1;
-//         color: #4a3b76;
-//         transform: scale(1.05)
-//     }
-// }
+input:focus,
+button:focus {
+    outline: none;
+}
 
-// input:focus,
-// button:focus {
-//     outline: none;
-// }
+@media (max-width: 736px) {
+    .checkout-wrapper {
+        width: 100%;
+    }
 
-// @media (max-width: 736px) {
-//     .checkout-wrapper {
-//         width: 100%;
-//     }
+    .shipping-container {
+        width: 100%;
+    }
 
-//     .shipping-container {
-//         width: 100%;
-//     }
+    .btns {
+        align-items: center;
 
-//     .btns {
-//         align-items: center;
+        button {
+            width: 50%;
+        }
+    }
 
-//         button {
-//             width: 50%;
-//         }
-//     }
+    form h1 {
+        text-align: center;
+    }
 
-//     form h1 {
-//         text-align: center;
-//     }
+    .name,
+    .address-info,
+    .cc-info {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
 
-//     .name,
-//     .address-info,
-//     .cc-info {
-//         flex-direction: column;
-//         width: 100%;
-//         justify-content: space-between;
+        div {
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            display: flex;
+        }
+    }
 
-//         div {
-//             align-items: center;
-//             flex-direction: column;
-//             width: 100%;
-//             display: flex;
-//         }
-//     }
+    .street,
+    .cc-num {
+        text-align: center;
+    }
 
-//     .street,
-//     .cc-num {
-//         text-align: center;
-//     }
-
-//     input {
-//         margin: 5px 0;
-//         min-height: 30px;
-//     }
-// }
+    input {
+        margin: 5px 0;
+        min-height: 30px;
+    }
+}
 
 // * ---------------------------------------------------------------------------FOOTER
 

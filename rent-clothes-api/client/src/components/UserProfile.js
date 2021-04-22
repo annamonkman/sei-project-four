@@ -4,7 +4,7 @@ import { getTokenFromLocalStorage, getPayloadFromToken } from '../helpers/auth'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-import ItemCard from './ItemCard'
+// import ItemCard from './ItemCard'
 
 const UserProfile = () => {
 
@@ -27,6 +27,8 @@ const UserProfile = () => {
     current_renter: '',
   })
 
+  const [items, setItems] = useState(null)
+
   const [userInfo, setUserInfo] = useState(null)
   const params = useParams()
 
@@ -46,6 +48,18 @@ const UserProfile = () => {
       try {
         const response = await axios.get(`/api/items/${params.id}`)
         setItem(response.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  }, [])
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get('/api/items/')
+        setItems(response.data)
       } catch (err) {
         console.log(err)
       }
@@ -91,19 +105,52 @@ const UserProfile = () => {
         <div className="wishlist-wrapper">
           <h3>Your wishlist:</h3>
           <div className="wishlist-items-cards-list">
-            {userInfo.wishlist_items.map(item => {
+            {/* {userInfo.wishlist_items.map(item => {
               console.log('ITEMMAP', item)
               return <ItemCard key={item} />
+            })} */}
+            {items.map(item => {
+              console.log('item.id', item.id)
+              console.log('userInfo.wishlist_items', userInfo.wishlist_items)
+              if (userInfo.wishlist_items.includes(item.id)) {
+                return (
+                  <div className="userprofile-wishlist-rent-item">
+                    {/* <img src={`${item.image_01}`} width="50px"/> */}
+                    <div className="wishlist-rented-image" style={{
+                      backgroundImage: `url(${item.image_01})`,
+                    }}></div>
+                    <span>{item.name}</span>
+                    <span>UK {item.size}</span>
+                    <span>£{item.price}</span>
+                    <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value="removeFromWishlist">X</button>
+                  </div>
+                )
+                
+              }
             })}
           </div>
-          <button className="remove-from-wishlist-button" onClick={handleRemoveFromWishlist} value="removeFromWishlist">Remove from wishlist</button>
         </div>
         <div className="rented-items-wrapper">
           <h3>Your Rented items:</h3>
           <div className="rented-items-cards-list">
-
+            {items.map(item => {
+              if (item.current_renter === userInfo.id) {
+                return (
+                  <div className="userprofile-wishlist-rent-item">
+                    {/* <img src={`${item.image_01}`} width="50px"/> */}
+                    <div className="wishlist-rented-image" style={{
+                      backgroundImage: `url(${item.image_01})`,
+                    }}></div>
+                    <span>{item.name}</span>
+                    <span>UK {item.size}</span>
+                    <span>£{item.price}</span>
+                    <button className="remove-from-rented-button" value="removeFromRented">X</button>
+                  </div>
+                )
+              }
+            })}
           </div>
-          <Link to="/checkout" className="go-to-checkout-button">Go to checkout</Link>
+          <Link to="/checkout" className="go-to-checkout-button" style={{ textDecoration: 'none' }}>Go to checkout</Link>
         </div>
         
       </div>
