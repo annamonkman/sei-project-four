@@ -67,9 +67,9 @@ I decided to build a fashion rental app, with which the user can browse items of
 In my plan I pseudocoded the relationships and functionality I wanted. Then I wireframed the visuals. </br>
 INCLUDE IMAGES
 
+# Demonstration of the app flow (images/ video of app)
 
-### backend
-I set up the backend first. 
+## Day 2-4: Backend
 
 ### Add to rentals
 I wrote the model for my items. This has fields for all the information I want to display about the items. It also has a field for 'current_renter' as a one-to-many relationship.
@@ -135,7 +135,7 @@ class WishlistView(APIView):
         return Response(user.wishlist_items.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 ```
 
-### frontend
+## Day 6-8: frontend
 
 ### Rent Now
 I knew from doing the backend that the front end would have to send the user id and item id to the backend. 
@@ -158,7 +158,7 @@ const handleRentNow = async event => {
   }
 ```
 
-### Styling
+### Day 9: Styling
 - I didn't want to use a CSS framework for the styling as I wanted as much control as I could over the UI and visuals. 
 - I wanted the branding to come through in the header so designed a header background collage, that felt luxury but also contemporary. I knew it would be easier to keep my overall design quite minimalistic so I could get away with a more decorative header and font. 
 - It was important for the information and images to be clear for the user. 
@@ -168,6 +168,7 @@ const handleRentNow = async event => {
 
 ## <a name="challenges"></a>Challenges
 - This was my first experience with building a full-stack app independently. So a big challenge was having to rely on my own knowledge and sort through issues myself (with the instructors there if needs be)
+- The backend relationships were the bit I found the trickiest. I found it hard to conceptualise how they worked, and when I tried to look online for guidence I couldn't find many similar processes. 
 
 ## <a name="wins"></a>Wins
 - I like the styling in particular the header collage.
@@ -176,6 +177,9 @@ const handleRentNow = async event => {
 
 ## <a name="future"></a>Future Improvements
 - More visual descriptors, ie. when you add an item to the wishlist it is clear in the UI that the item was been added. 
+- Errors on the register and login forms. 
+- Ability for a loggin-in user to upload items of clothing to rent. This would be in a form with a PUT request. 
 
 ## <a name="learning"></a>Key Learning
 - Read through documentation thoroughly.
+- Improve my problem solving abilities.
