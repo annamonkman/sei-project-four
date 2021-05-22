@@ -48,7 +48,8 @@ const Register = () => {
           <input 
             className={`input ${errors.username ? 'is-error' : ''}`}
             name="username" 
-            type="text" id="username" 
+            type="text" 
+            id="username" 
             value={formData.username} 
             onChange={handleChange}/>
         </div>
