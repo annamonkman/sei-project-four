@@ -9,7 +9,7 @@ const ItemIndex = () => {
 
   useEffect( () => {
     const getData = async () => {
-      const response = await axios.get('/api/items/')
+      const response = await axios.get('/api/items')
       setItems(response.data)
     }
     getData()
