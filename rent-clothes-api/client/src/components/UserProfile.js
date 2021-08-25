@@ -49,7 +49,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(`/api/items/${params.id}`)
+        const response = await axios.get(`/api/items/${params.id}/`)
         setItem(response.data)
       } catch (err) {
         console.log(err)
