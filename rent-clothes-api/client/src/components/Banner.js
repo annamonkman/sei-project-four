@@ -51,25 +51,23 @@ const Banner = () => {
     <header>
 
       <div className="banner-wrapper">
-        <div className="banner-content">
-          <div className="logo-banner-link">
-            <Link to="/" id="logo">
-              CAROUSEL
-            </Link>
-          </div>
-          {!isLoggedIn || !userInfo ?
-            <div className="user-links">
-              <Link to="/sign-in" className="user-link-item sign-in-link"></Link>
-            </div>
-            :
-            <>
-              <div className="user-links">
-                <Link to={`/user-profile/${userInfo.id}`} className="user-link-item profile-page-link"></Link>
-                <button onClick={handleLogout} className="logout-button user-link-item">Log out</button>
-              </div>
-            </>
-          }
+        <div className="logo-banner-link">
+          <Link to="/" id="logo">
+            CAROUSEL
+          </Link>
         </div>
+        {!isLoggedIn || !userInfo ?
+          <div className="user-links">
+            <Link to="/sign-in" className="user-link-item sign-in-link"></Link>
+          </div>
+          :
+          <>
+            <div className="user-links">
+              <Link to={`/user-profile/${userInfo.id}`} className="user-link-item profile-page-link"></Link>
+              <button onClick={handleLogout} className="logout-button user-link-item">Log out</button>
+            </div>
+          </>
+        }
       </div>
       
       <section className="nav-links-wrapper">

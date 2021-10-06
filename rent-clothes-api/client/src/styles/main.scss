@@ -14,28 +14,33 @@
   // min-width: 100vw;
 }
 
-
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 // * ---------------------------------------------------------------------------BANNER
 header {
   margin: 0;
   padding: 0;
   position: relative;
+  top: 0;
   z-index: 1000;
   vertical-align: baseline;
   text-align: center;
   // border: 1px solid red;
 }
 .banner-wrapper {
-  position: relative;
-}
-.banner-content {
   max-height: none;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  // width: 990px;
   margin: 0 auto;
   z-index: 1;
   top: 0;
@@ -43,7 +48,7 @@ header {
   bottom: 0;
   right: 0;
   position: relative;
-  padding: 25px 8px;
+  padding: 25px 0px;
   // border: 1px solid green;
   background-color: palegoldenrod;
   background-image: url('https://res.cloudinary.com/project-3/image/upload/v1619046034/Items/banner2_nejtcl.png');
@@ -65,12 +70,11 @@ header {
 }
 .user-links {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 7px;
+  right: 40px;
   bottom: 0;
   display: flex;
   align-items: center;
-  padding-right: 100px;
   font-size: 15px;
   line-height: normal;
   // border: 1px solid yellowgreen;
@@ -117,6 +121,7 @@ header {
   font-size: 16px;
   font-weight:800;
   border-radius: 0.8em;
+  cursor: pointer;
 }
 
 
@@ -338,12 +343,14 @@ header {
   margin-right: 50px;
   padding: 10px 20px;
   font-size: 16px;
+  cursor: pointer;
 }
 .add-to-wishlist-button {
   border: none;
   background-color: white;
   text-decoration: underline;
   font-size: 16px;
+  cursor: pointer;
 }
 .add-to-wishlist-button:focus {
   border-radius: 0;
@@ -411,20 +418,48 @@ header {
 // * ---------------------------------------------------------------------------HOW IT WORKS
 
 .how-it-works-page-wrapper {
-  max-width: 1000px;
+  max-width: 100%;
   // border: 1px solid red;
   margin: 0 auto;
-  margin-top: 50px;
+  height: 100vh;
+  padding-top: 50px;
 }
 .how-it-works-info {
-  max-width: 800px;
+  max-width: 700px;
   // border: 1px solid blue;
   margin: 0 auto;
 }
+.how-it-works-info h2 {
+  padding-bottom: 20px;
+}
 .become-a-lender {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   margin-top: 80px;
+}
+.starstamp {
+  width: 150px;
+  position: absolute;
+  z-index: -1;
+}
+.star01 {
+  right: 150px;
+  transform: rotate(100deg);
+}
+.star02 {
+  left: 50px;
+  top: 600px;
+  transform: rotate(20deg);
+}
+.star03 {
+  left: 20px;
+  top: 250px;
+  transform: rotate(100deg);
+}
+.star04 {
+  right: 220px;
+  top: 560px;
+  transform: rotate(180deg);
 }
 
 // * ---------------------------------------------------------------------------USER PROFILE
@@ -433,6 +468,7 @@ header {
   max-width: 900px;
   // border: 1px solid pink;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 .welcome-back-message {
   text-align: center;
@@ -484,7 +520,8 @@ header {
 .remove-from-rented-button, .remove-from-wishlist-button{
   background-color: white;
   border: 1px solid rgb(206, 206, 206);
-  color: rgb(167, 167, 167)
+  color: rgb(167, 167, 167);
+  cursor: pointer;
 }
 .go-to-checkout-button {
   width: 180px;
@@ -507,6 +544,8 @@ header {
 .checkout-wrapper {
     display: flex;
     justify-content: center;
+    // border: 1px solid red;
+    padding-bottom: 80px;
 }
 
 .shipping-container {
@@ -658,7 +697,6 @@ input:focus,
 // * ---------------------------------------------------------------------------REGISTRATION
 
 .register-form-container {
-  // border: 1px solid red;
 }
 .login-form-container {
 
@@ -712,6 +750,7 @@ input:focus {
   margin-top: 30px;
   justify-content: space-between;
   // border: 1px solid pink;
+  padding-bottom: 150px;
 }
 .reglogin-page-wrapper h3 {
   text-align: center;
@@ -729,10 +768,10 @@ input:focus {
   width: 100%;
   // max-width: 935px;
   font-size: 12px;
-  padding: 3px 10px;
+  padding: 3px 0px;
   background-color: rgb(240, 240, 240);
   // border: 1px solid pink;
-  position:fixed;
+  position: relative;
   z-index: 100;
   // padding: 0;
   min-height: 15px;
