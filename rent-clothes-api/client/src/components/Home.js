@@ -5,7 +5,6 @@ const Home = () => {
 
   return (
     <div className="home-wrapper">
-      {/* <div className="grid-wrapper"> */}
       <ul className="home-images-ul">
         <li className="home-images-list-items"><Link to='/clothes/'><div className="home-image himg1"><div className="home-img-label">Dresses</div></div></Link></li>
         <li className="home-images-list-items"><Link to='/clothes/'><div className="home-image himg2"><div className="home-img-label">Tops</div></div></Link></li>
@@ -14,7 +13,6 @@ const Home = () => {
         <li className="home-images-list-items"><Link to='/clothes/'><div className="home-image himg5"><div className="home-img-label">Sweaters</div></div></Link></li>
         <li className="home-images-list-items"><Link to='/clothes/'><div className="home-image himg6"><div className="home-img-label">Coats/Jackets</div></div></Link></li>
       </ul>
-      {/* </div> */}
     </div>
   )
 

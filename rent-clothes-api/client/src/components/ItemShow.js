@@ -62,7 +62,6 @@ const ItemShow = () => {
     } catch (err) {
       console.log(err)
     }
-    
   }
 
   const handleRentNow = async event => {
@@ -120,8 +119,6 @@ const ItemShow = () => {
         <p className="description">{ item.description }</p>
         <p className="color">{ item.colour }</p>
         <p className="material">{ item.material }</p>
-        
-        
         
 
       </div>

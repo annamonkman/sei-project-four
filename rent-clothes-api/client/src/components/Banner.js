@@ -63,7 +63,7 @@ const Banner = () => {
           :
           <>
             <div className="user-links">
-              <Link to={`/user-profile/${userInfo.id}`} className="user-link-item profile-page-link"></Link>
+              <Link to={`/user-profile/${userInfo.id}/`} className="user-link-item profile-page-link"></Link>
               <button onClick={handleLogout} className="logout-button user-link-item">Log out</button>
             </div>
           </>

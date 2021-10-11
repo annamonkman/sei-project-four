@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ItemCard = ({ image_01: image01, id, brand, name, price, rrp, size }) => {
   return (
     <>
-      <Link to={`/clothes/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
+      <Link to={`/clothes/${id}/`} style={{ textDecoration: 'none', color: 'black' }}>
         <div className="item-card-wrapper">
         
           <div className="item-card-image-wrapper"

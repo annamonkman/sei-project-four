@@ -20,11 +20,6 @@ const HowItWorks = () => {
         <h3>Would you like to work with us to become a lender?</h3>
         <p>If you would like to start lending your clothing, please get in contact with us.</p>
       </div>
-      
-      
-
-      
-
     </div>
   )
 }
