@@ -23,10 +23,22 @@ I chose to work individually and created an app for a prospective fashion rental
 **Timeframe: 9 days**
 
 ### Demonstration of the app flow
-![homepage1](https://res.cloudinary.com/project-3/image/upload/v1622590970/sei-readmes/homepagescreenshot1_dyaux8.png)
+![home](https://res.cloudinary.com/project-3/image/upload/v1634569730/sei-readmes/p4home_yhiukk.png)
+
+![index](https://res.cloudinary.com/project-3/image/upload/v1634569729/sei-readmes/p4index_npyfz6.png)
+
+![item](https://res.cloudinary.com/project-3/image/upload/v1634569729/sei-readmes/p4item_qqrn4g.png)
+
+![register](https://res.cloudinary.com/project-3/image/upload/v1634569729/sei-readmes/p4reg_k0oits.png)
+
+![user](https://res.cloudinary.com/project-3/image/upload/v1634569730/sei-readmes/p4user_cbt203.png)
+
+![checkout](https://res.cloudinary.com/project-3/image/upload/v1634569729/sei-readmes/p4about_csdd85.png)
+
+</br>
 
 ## <a name="project"></a>Link to Deployed Project
-Link coming soon </br>
+[View App here](https://carousel-collective.herokuapp.com) </br>
 </br>
 
 ### Installation
@@ -362,9 +374,8 @@ If I had more time I would definitely have wanted to have a few black & white ve
 * Fill out some of the information. Add more items in the database and information on the about page.
 * Ability to filter the items by type, size, brand & colour. I didn't want to focus on filter functionality as I spent a lot of time on this in project three and wanted to work on areas I hadn't explored before. Once I add the filter I could link to specific types of items from the homepage, so the 'tops' image would link to the filtered tops in the index etc.
 
-* *UPDATE* I spent an extra half-day tidying some of the CSS and removing the error in the register form before deploying the project. 
+* *UPDATE* Before deploying to Heroku I spend an extra half-day tidying some of the CSS and removing the error in the register form. 
 
 ## <a name="learning"></a>Key Learning
 * Since I was working on my own I had to do a lot of the searching for answers myself. I did this by reading documentation and going on sites like Stack Overflow. When it came to Django I found reading through documentation useful so I'll do that more in the future. 
 * I like the control I had over this project, which is something I'm used to, having studied art, but it definitely helped me to see the benefit of working in a group. It is very helpful to bounce off someone else for ideas when it comes to tricky functionality, something which helped the development process move along more quickly in projects two and three. 
-
