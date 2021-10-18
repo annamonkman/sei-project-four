@@ -29,11 +29,6 @@ I chose to work individually and created an app for a prospective fashion rental
 Link coming soon </br>
 </br>
 
-**Login User details:** </br>
-username: joeb </br>
-email: joeb@email.com </br>
-password: Hello123!
-
 ### Installation
 * Clone or Download the repo
 * `pipenv` to install Python packages
@@ -46,6 +41,11 @@ password: Hello123!
 * `cd client` to go into client folder
 * `yarn` to install front-end dependencies
 * `yarn start` to start front-end server
+
+**Login User details:** </br>
+username: joeb </br>
+email: joeb@email.com </br>
+password: Hello123!
 
 ## <a name="tech"></a>Technologies Used
 **Backend:**
