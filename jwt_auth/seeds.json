@@ -1,2 +1,40 @@
 [
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$vNLNvKcSKifBfYXy7tz1SR$cD4zUt5WOLCBGCKS3RZztSTdCBUyRbbbNvX1R8Skjp8=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-10-18T14:10:07.305Z",
+    "email": "admin@email.com",
+    "first_name": "",
+    "last_name": "",
+    "groups": [],
+    "user_permissions": [],
+    "wishlist_items": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$YYM6cgagyMDAbgIuKsc5Ww$PGhi3tuoMuHktM6yINXwVAEVIwsypTLQs4jur4ldCRw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "joeb",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-10-18T14:24:46.616Z",
+    "email": "joeb@email.com",
+    "first_name": "Joe",
+    "last_name": "Bloggs",
+    "groups": [],
+    "user_permissions": [],
+    "wishlist_items": []
+  }
+}
 ]

@@ -38,5 +38,365 @@
     "description": "Long sleeve panelled semi-sheer viscose-blend mesh short dress in blue. Ruching throughout. Mock neck collar. Thumb opening at cuffs. Padding at side-seam. Zip closure at back. Full stretch mesh lining. Tonal hardware.",
     "current_renter": null
   }
+},
+{
+  "model": "items.item",
+  "pk": 3,
+  "fields": {
+    "name": "Black Wool Flatground Skirt",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1619089416/Items/211342F092277_1_ofljrr.webp",
+    "image_02": "https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/211342F092277_2/balenciaga-black-wool-flatground-skirt.jpg",
+    "image_03": null,
+    "garment_type": "Skirt",
+    "brand": "BALENCIAGA",
+    "size": 8,
+    "price": 35.0,
+    "rrp": 795.0,
+    "colour": "Black",
+    "material": "Body 1: 100% wool. Body 2: 61% polyamide, 39% acetate. Trim: 100% cotton. Lining: 61% polyamide, 39%",
+    "is_available": true,
+    "description": "Paneled wool gabardine and nylon-blend satin mid-length skirt in black. Mid-rise. Two-pocket styling. Belt loops at waistband. Partially concealed button closure at front. Central vent at front hem. Tonal logo-engraved hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 4,
+  "fields": {
+    "name": "Orange Campo Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636009/Items/orange_campo_dress_01_cvqj7t.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636009/Items/orange_campo_dress_02_tkpdpz.jpg",
+    "image_03": null,
+    "garment_type": "Dress",
+    "brand": "Paloma Wool",
+    "size": 8,
+    "price": 25.0,
+    "rrp": 140.0,
+    "colour": "Orange",
+    "material": "100% organic cotton",
+    "is_available": true,
+    "description": "Cap sleeve organic cotton jersey mid-length dress in orange featuring graphic pattern in multicolor. Crewneck collar. Elasticized trim with gathering at front.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 5,
+  "fields": {
+    "name": "Beige Powertulle Corset Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636227/Items/beige_powertulle_corset_dress_01_ulhkzi.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636227/Items/beige_powertulle_corset_dress_02_bzyn2g.jpg",
+    "image_03": "https://res.cloudinary.com/project-3/image/upload/v1621636227/Items/beige_powertulle_corset_dress_03_hr3cvh.jpg",
+    "garment_type": "Dress",
+    "brand": "Dion Lee",
+    "size": 6,
+    "price": 31.0,
+    "rrp": 631.0,
+    "colour": "Beige",
+    "material": "92% polyamide, 8% elastane.",
+    "is_available": true,
+    "description": "Long sleeve semi-sheer stretch nylon tulle mid-length dress in beige. Paneled construction. Integrated boning throughout. Elasticized halter strap with toggle fastening at modified V-neck collar. Underwire at cups. Zip closure at back. Unlined. Silver-tone hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 6,
+  "fields": {
+    "name": "Beige Button-Down Open Back Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636374/Items/button_open_back_dress_01_hszwws.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636374/Items/button_open_back_dress_02_lpj1mu.jpg",
+    "image_03": "https://res.cloudinary.com/project-3/image/upload/v1621636375/Items/button_open_back_dress_03_i7ghtx.jpg",
+    "garment_type": "Dress",
+    "brand": "Materiel Tbilisi",
+    "size": 8,
+    "price": 29.0,
+    "rrp": 510.0,
+    "colour": "Beige",
+    "material": "87% polyester, 13% polyurethane.",
+    "is_available": true,
+    "description": "Short sleeve faux-leather mid-length dress in beige. Spread collar. Button closure at front. Elasticized waistband. Faux-flap pockets at waist. Cut-out at back. Unlined.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 7,
+  "fields": {
+    "name": "Beige Open Sleeve Blazer",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636558/Items/barragan-beige-open-sleeve-blazer-01_s4hxts.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636558/Items/barragan-beige-open-sleeve-blazer-02_zjiry7.jpg",
+    "image_03": "https://res.cloudinary.com/project-3/image/upload/v1621636558/Items/barragan-beige-open-sleeve-blazer-03_whfm2s.jpg",
+    "garment_type": "Jacket",
+    "brand": "Barragán",
+    "size": 10,
+    "price": 32.0,
+    "rrp": 590.0,
+    "colour": "Beige",
+    "material": "Body: 60% cotton, 40% nylon. Lining: 100% viscose.",
+    "is_available": true,
+    "description": "Long sleeve cotton and nylon-blend grosgrain blazer in beige. Y-neck collar. Double-breasted press-stud closure and cut-outs at front. Welt pockets at chest and waist. Padded shoulders. Cut-out at sleeves. Central vent at back hem. Viscose twill lining in grey. Fully lined.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 8,
+  "fields": {
+    "name": "Beige & Pink Canvas Painted Coat",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636677/Items/marni-beige-and-pink-canvas-painted-coat-01_lzwhk8.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636677/Items/marni-beige-and-pink-canvas-painted-coat-02_pvzpgc.jpg",
+    "image_03": null,
+    "garment_type": "Jacket",
+    "brand": "Marni",
+    "size": 8,
+    "price": 36.0,
+    "rrp": 750.0,
+    "colour": null,
+    "material": "100% cotton.",
+    "is_available": true,
+    "description": "Half sleeve cotton canvas coat in beige. Printed graphic in pink at front. Spread collar. Button closure at front. Flap pockets at chest and waist. Unlined. Tonal hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 9,
+  "fields": {
+    "name": "Grey Stripe Suiting Blazer",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621636916/Items/ganni-grey-stripe-suiting-blazer-01_yf78yo.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621636916/Items/ganni-grey-stripe-suiting-blazer-02_ukxuof.jpg",
+    "image_03": null,
+    "garment_type": "Jacket",
+    "brand": "Ganni",
+    "size": 10,
+    "price": 26.0,
+    "rrp": 392.0,
+    "colour": "Grey",
+    "material": "Body: 54% recycled polyester, 44% virgin wool, 2% elastane. Lining: 100% polyester.",
+    "is_available": true,
+    "description": "Long sleeve woven stretch virgin wool-blend blazer in grey featuring striped pattern in tones of grey. Notched lapel collar. Two-button closure at front. Flap pockets and detachable belt-style strap with button and hook fastening at waist. Padded shoulders. Two-button barrel cuffs. Welt pocket at interior. Logo-woven satin lining in black. Fully lined. Black hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 10,
+  "fields": {
+    "name": "Orange & Tan Carl Leggings",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637057/Items/paloma-wool-orange-and-tan-carl-leggings-01_mof68h.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637057/Items/paloma-wool-orange-and-tan-carl-leggings-02_bxppbq.jpg",
+    "image_03": null,
+    "garment_type": "Trousers",
+    "brand": "Paloma Wool",
+    "size": 8,
+    "price": 20.0,
+    "rrp": 100.0,
+    "colour": "Orange",
+    "material": "95% viscose, 5% elastane.",
+    "is_available": true,
+    "description": "Stretch viscose jersey leggings colorblocked in tones of orange and tan. Graphic pattern in multicolor throughout. High-rise. Integrated belt-style strap with O-ring hardware at elasticized waistband. Pale gold-tone hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 11,
+  "fields": {
+    "name": "Beige Open Knee Trousers",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637147/Items/barragan-beige-open-knee-trousers-01_mp92vy.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637147/Items/barragan-beige-open-knee-trousers-02_kn5y7q.jpg",
+    "image_03": null,
+    "garment_type": "Trousers",
+    "brand": "Barragán",
+    "size": 8,
+    "price": 26.0,
+    "rrp": 375.0,
+    "colour": "Beige",
+    "material": "60% cotton, 40% nylon.",
+    "is_available": true,
+    "description": "Tapered cotton and nylon-blend grosgrain trousers in beige. High-rise. Four-pocket styling. Belt loops at waistband. Pleats at front. Cut-out at knees. Rolled cuffs. Zip-fly.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 12,
+  "fields": {
+    "name": "Black Faux-Leather Slouch Pants",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637241/Items/materiel-tbilisi-black-faux-leather-slouch-pants-01_gzbfsf.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637241/Items/materiel-tbilisi-black-faux-leather-slouch-pants-02_gb8uos.jpg",
+    "image_03": null,
+    "garment_type": "Trousers",
+    "brand": "MATÉRIEL TBILISI",
+    "size": 8,
+    "price": 31.0,
+    "rrp": 580.0,
+    "colour": "Black",
+    "material": "87% polyester, 13% polyurethane.",
+    "is_available": true,
+    "description": "Relaxed-fit buffed faux-leather pants in black. Mid-rise. Four-pocket styling. Pinched seam at front legs. Zip-fly. Antiqued brass-tone hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 13,
+  "fields": {
+    "name": "Off-White Mass Box Pleated Skirt",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637253/Items/maximilian-off-white-mass-box-pleated-skirt-01_gx42oy.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637253/Items/maximilian-off-white-mass-box-pleated-skirt-02_zhytrg.jpg",
+    "image_03": null,
+    "garment_type": "Skirt",
+    "brand": "MAXIMILIAN",
+    "size": 6,
+    "price": 34.0,
+    "rrp": 715.0,
+    "colour": "White",
+    "material": "Made in United Kingdom.  211742F090012  Maximilian - Off-White Mass Box Pleated Skirt Maximilian -",
+    "is_available": true,
+    "description": "Plain-woven wool short skirt in off-white. Low-rise. Self-tie straps with bead accents at waist. Pleats at back waistband. Zip closure at side-seam. Full cupro satin lining. Tonal hardware.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 14,
+  "fields": {
+    "name": "Pink Inside Out Trompe-l'œil T-Shirt",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637686/Items/moschino-pink-inside-out-trompe-lil-t-shirt_cjkhur.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637686/Items/moschino-pink-inside-out-trompe-lil-t-shirt_cjkhur.jpg",
+    "image_03": null,
+    "garment_type": "Top",
+    "brand": "MOSCHINO",
+    "size": 8,
+    "price": 24.0,
+    "rrp": 330.0,
+    "colour": "Lilac",
+    "material": "100% cotton.",
+    "is_available": true,
+    "description": "Short sleeve cotton jersey T-shirt featuring graphic printed in white and tones of pink throughout. Rib knit crewneck collar. Grosgrain logo flag in black and white at back collar.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 15,
+  "fields": {
+    "name": "Black Oscar Wilde Cropped Wide Sleeve Sweater",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637699/Items/jw-anderson-black-oscar-wilde-cropped-wide-sleeve-sweater_hki9rl.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637699/Items/jw-anderson-black-oscar-wilde-cropped-wide-sleeve-sweater_hki9rl.jpg",
+    "image_03": null,
+    "garment_type": "Sweater",
+    "brand": "JW Anderson",
+    "size": 8,
+    "price": 31.0,
+    "rrp": 590.0,
+    "colour": "Black",
+    "material": "100% Wool.",
+    "is_available": true,
+    "description": "Knit wool sweater in black. Jacquard knit floral pattern in multicolor throughout. Rib knit crewneck collar, cuffs, and hem. Grosgrain trim in grey featuring embroidered text in black at front. Dropped shoulders. Cropped hem.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 16,
+  "fields": {
+    "name": "Orange All Over Print Crop Long Sleeve T-Shirt",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621637699/Items/hood-by-air-orange-all-over-print-crop-long-sleeve-t-shirt_rbp3o3.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621637699/Items/hood-by-air-orange-all-over-print-crop-long-sleeve-t-shirt_rbp3o3.jpg",
+    "image_03": null,
+    "garment_type": "Top",
+    "brand": "HOOD BY AIR",
+    "size": 8,
+    "price": 23.0,
+    "rrp": 240.0,
+    "colour": "Orange",
+    "material": "95% cotton, 5% elastane.",
+    "is_available": true,
+    "description": "Long sleeve stretch cotton jersey T-shirt in orange featuring logo and text printed in black throughout. Rib knit crewneck collar. Cropped hem.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 17,
+  "fields": {
+    "name": "Peephole Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1619093526/Items/EMSS21KN01BBL_babyblue_Front_P_yk59sg.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1619093572/Items/EMSS21KN01BBL_babyblue_Side_P_i7mom2.jpg",
+    "image_03": null,
+    "garment_type": "Dress",
+    "brand": "Ester Manas",
+    "size": 18,
+    "price": 24.0,
+    "rrp": 410.0,
+    "colour": "Blue",
+    "material": "65% Cotton, 35% Polyamide",
+    "is_available": true,
+    "description": "One size fits all",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 18,
+  "fields": {
+    "name": "Sailor T-Shirt",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1619093685/Items/EMSS21TO09BLA_black_Front_P_rfmrct.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1619093722/Items/EMSS21TO09BLA_black_Back_P_nhhzm7.jpg",
+    "image_03": null,
+    "garment_type": "Top",
+    "brand": "Ester Manas",
+    "size": 16,
+    "price": 18.0,
+    "rrp": 90.0,
+    "colour": "Black",
+    "material": "100% Cotton",
+    "is_available": true,
+    "description": "xxx",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 19,
+  "fields": {
+    "name": "Zuwa Bubu Dress",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621638484/Items/kaicollective_vsgvot.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621638484/Items/kaicollective_vsgvot.jpg",
+    "image_03": null,
+    "garment_type": "Dress",
+    "brand": "Kai Collective",
+    "size": 12,
+    "price": 15.0,
+    "rrp": 90.0,
+    "colour": "Orange",
+    "material": "100% polyester.",
+    "is_available": true,
+    "description": "Zuwa is a bubu with a high slit and an elegant one-shoulder detail. If you love glamour but also comfort, you will love Zuwa. It is generously cut from the most gorgeous silky satin.",
+    "current_renter": null
+  }
+},
+{
+  "model": "items.item",
+  "pk": 20,
+  "fields": {
+    "name": "Bea Dress Ginger",
+    "image_01": "https://res.cloudinary.com/project-3/image/upload/v1621638505/Items/kai2_t6s4wu.jpg",
+    "image_02": "https://res.cloudinary.com/project-3/image/upload/v1621638505/Items/kai2_t6s4wu.jpg",
+    "image_03": null,
+    "garment_type": "Dress",
+    "brand": "Kai Collective",
+    "size": 18,
+    "price": 17.0,
+    "rrp": 120.0,
+    "colour": "Orange",
+    "material": "97% Cotton, 3% Elastane",
+    "is_available": true,
+    "description": "The Bea dress in cotton is a beauty that can be worn for a summer wedding with killer heels or to the beach over a pair of shorts. Its range is amazing. It comes with a belt to cinch it in at the waist. You can do away with the belt and leave it open over a pair of jeans- it’s entirely up to you as it’s a stunner any which way you look at it.",
+    "current_renter": null
+  }
 }
 ]

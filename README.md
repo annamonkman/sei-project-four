@@ -36,7 +36,6 @@ password: Hello123!
 
 ### Installation
 * Clone or Download the repo
-* `cd rent-clothes-api` go into rent-clothes-api
 * `pipenv` to install Python packages
 * `pipenv shell` to enter virtual environment
 * `python manage.py makemigrations`
