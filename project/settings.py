@@ -1,3 +1,5 @@
+import django_on_heroku # put this at the top of the file
+
 """
 Django settings for project project.
 
@@ -10,7 +12,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import django_on_heroku # put this at the top of the file
+
 
 import os
 

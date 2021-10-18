@@ -4,7 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django-on-heroku = "*"
+django = "*"
+pylint = "*"
+psycopg2-binary = "*"
+djangorestframework = "*"
+pyjwt = "*"
 
 [dev-packages]
 
